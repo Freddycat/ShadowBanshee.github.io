@@ -1,0 +1,42 @@
+body {
+    background-color: powderblue;
+    * {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+      }
+      div.button {
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+      }
+      img.gif {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    div.zinebutton {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px;
+    }
+    div.text {
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
