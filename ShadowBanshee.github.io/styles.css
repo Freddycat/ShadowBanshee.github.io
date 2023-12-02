@@ -1,7 +1,8 @@
 body {
-  height: 100%;
-  background: url(images/giphyclouds.gif) left top no-repeat, url(background/bg.png) left top no-repeat;
-  background-size: cover, fill;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: url(images/giphyclouds.gif)no-repeat left top, url(background/bg.png) no-repeat left top;
+  background-size: cover, cover;
 }
 
 img {
@@ -45,6 +46,7 @@ button img:hover {
   margin-right: auto;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
   width: 90vw;
 }
 .home img {
@@ -90,7 +92,8 @@ div.buttons {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 60vh;
+  max-width: 800px;
+  width: 90vw;
   margin: 0 auto;
   margin-bottom: 45px;
   position: relative;
@@ -162,7 +165,7 @@ div.buttons {
 }
 
 .Img1:hover {
-  transform: translate(-50%, -50%) scale(1.75);
+  transform: translate(-50%, -50%) scale(1.6);
   /* Adjust the scaling factor as needed */
 }
 
@@ -189,7 +192,7 @@ div.buttons {
 }
 
 .Img2:hover {
-  transform: translate(-50%, -50%) scale(1.75);
+  transform: translate(-50%, -50%) scale(1.6);
   /* Adjust the scaling factor as needed */
 }
 
@@ -216,7 +219,7 @@ div.buttons {
 }
 
 .Img3:hover {
-  transform: translate(-50%, -50%) scale(1.75);
+  transform: translate(-50%, -50%) scale(1.6);
   /* Adjust the scaling factor as needed */
 }
 
@@ -242,7 +245,7 @@ div.buttons {
 }
 
 .Img4:hover {
-  transform: translate(-50%, -50%) scale(2);
+  transform: translate(-50%, -50%) scale(1.75);
   /* Adjust the scaling factor as needed */
 }
 
@@ -274,4 +277,22 @@ div.buttons {
   margin: 0 auto;
   width: 100%;
   /* Add this to ensure 100% width even if max-width is set */
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: rgba(50, 50, 50, 0.7); /* Default text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#backToTopBtn:hover {
+  color: rgba(50, 50, 50, 1); /* Darker text color on hover */
 }
