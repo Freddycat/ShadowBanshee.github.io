@@ -1,8 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  height: 100vh;
-  background: url(images/giphyclouds.gif)no-repeat left top, url(background/bg.png) no-repeat left top;
-  background-size: cover, cover;
+  background: url(background/bg.png) no-repeat left top;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 img {
@@ -37,18 +38,48 @@ div.button {
   justify-content: center;
   transition: transform 0.25s;
 }
+
 button img:hover {
   transform: scale(1.1);
 }
+
+.container {
+  position: relative;
+  margin-bottom: -115px;
+}
+
+.clouds {
+  position: absolute;
+  width: 100vw;
+}
+
+.homepageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-grow: 1;
+  z-index: 999;
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
 .home {
   display: block;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   width: 90vw;
 }
+
 .home img {
   transition: transform 0.25s;
 }
@@ -60,6 +91,7 @@ img.title {
   justify-content: center;
   align-items: center;
   width: 90vw;
+  margin-bottom: 25px;
 }
 
 img.gif {
@@ -79,6 +111,38 @@ button.zineImg {
   align-items: center;
   max-width: 33vw;
 }
+
+.bansheeChase {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  right: 0vw;
+  top: 0px;
+}
+
+.bansheeLeft {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  left: 0;
+  top: 0px;
+}
+
+.bottom {
+  position: sticky;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.superKidSpeach {
+  position: sticky;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+}
+
 div.text {
   position: absolute;
   color: white;
@@ -92,9 +156,10 @@ div.buttons {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
-  width: 90vw;
+  max-width: 600px;
+  width: 75vw;
   margin: 0 auto;
+  margin-top: 25px;
   margin-bottom: 45px;
   position: relative;
   background-image: url('ZineButtons/buttonbackground.gif');
@@ -102,10 +167,12 @@ div.buttons {
   background-position: center;
 }
 
-.buttons button{
-  max-width: 50%;;
+.buttons button {
+  max-width: 50%;
+  ;
 }
-.buttons button img{
+
+.buttons button img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -131,6 +198,17 @@ div.buttons {
   background-position: center;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+#bansheeVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .BansheeZines {
@@ -260,6 +338,16 @@ div.buttons {
   display: flex;
   flex-direction: column;
 }
+#SuperKidVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .SuperKidZines {
   position: absolute;
@@ -284,7 +372,9 @@ div.buttons {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  color: rgba(50, 50, 50, 0.7); /* Default text color */
+  color: rgba(50, 50, 50, 0.7);
+  /* Default text color */
+  text-shadow: 1px 1px 0 #2b2b2b;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -294,5 +384,6 @@ div.buttons {
 }
 
 #backToTopBtn:hover {
-  color: rgba(50, 50, 50, 1); /* Darker text color on hover */
+  color: rgba(50, 50, 50, 1);
+  /* Darker text color on hover */
 }
