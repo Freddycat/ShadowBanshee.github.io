@@ -1,0 +1,74 @@
+.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    margin-bottom: 25px;
+}
+
+.container {
+    position: relative;
+    margin-bottom: -115px;
+}
+
+.clouds {
+    position: absolute;
+    width: 100vw;
+}
+
+.gif {
+    width: 20%;
+}
+
+.zineImg {
+    display: flex;
+    max-width: 33vw;
+}
+
+.superKidSpeach {
+    position: sticky;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+}
+
+.homepageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-grow: 1;
+    z-index: 999;
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.bansheeChase {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    right: 0vw;
+    top: 0px;
+}
+
+.bansheeLeft {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    left: 0;
+    top: 0px;
+}
+
+.bottom {
+    position: sticky;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
