@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShadowBanshee</title>
+    <link rel="stylesheet" href="/Index/normalize.css">
+    <link rel="stylesheet" href="/Index/home.css">
+    <link rel="stylesheet" href="questions.css">
+    <link href="https://db.onlinewebfonts.com/c/dfb3844c6834f75c91f844559732e9a4?family=AlterEgo+BB+W00+Regular"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="buttonCSS">
+        <button type="button" class="home" onclick="window.location.href='/index.html'">
+            <img class=buttonJS src="/title/Oneeyedsuperkid.png" />
+        </button>
+    </div>
+    <img class=title src="/title/text.png">
+    <div class="container">
+        <img src="/clouds.gif" class="clouds">
+    </div>
+    <div class="edge">
+        <img src="Images/example_question.png" class="example_question">
+        <img src="Images/speghatti_question.png" class="speghatti_question">
+    </div>
+    <div class="container">
+        <img class="buttonHeader" src="Images/periodical_logo.png" alt="">
+        <p>LEAVE THE INFO YOU WANT DISPLAYED IN MY ZINE :)</p>
+        <input class="name text" placeholder="Name (optional)">
+        <input class="contact text" placeholder="@ or Business (optional)">
+        <p>LEAVE BLANK FOR -ANONYMOUS</p>
+        <textarea class="question text" placeholder="Your Question Here"></textarea>
+        <button id="submit" disabled>Submit</button>
+    </div>
+    <div class="bottom">
+        <img src="Images/peter_question.png" class="peter_question">
+        <img src="Images/superkid_quesion.png" class="superkid_quesion">
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script
+        src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=6LfN_qcpAAAAADip26Nh14bpch3kTr36TxItXmdK"
+        async defer></script>
+    <script src="send.js"></script>
+    <script src="/Index/main.js"></script>
+</body>
+
+</html>

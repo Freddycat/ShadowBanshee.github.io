@@ -22,14 +22,19 @@
 
 .zineImg {
     display: flex;
-    max-width: 33vw;
+    max-width: 28vw;
+    animation: floatUpDown 1.5s ease-in-out infinite alternate;
 }
 
-.superKidSpeach {
-    position: sticky;
-    width: 100vw;
-    left: 0;
-    bottom: 0;
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+        /* Adjust the distance you want the image to float up and down */
+    }
 }
 
 .homepageContent {
@@ -53,22 +58,47 @@
     position: absolute;
     width: 30vw;
     height: auto;
-    right: 0vw;
-    top: 0px;
+    top: 25px;
+    right: 10px;
 }
 
 .bansheeLeft {
     position: absolute;
-    width: 30vw;
+    width: 23vw;
     height: auto;
     left: 0;
-    top: 0px;
+    top: 30v;
+}
+
+.periodical {
+    position: absolute;
+    top: 0;
+    left: 12vw;
+    width: 20vw;
+    animation: floatUpDown2 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 .bottom {
+    margin-top: 0px;
     position: sticky;
     top: 100%;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+.superKidSpeach {
+    position: sticky;
+    width: 75vw;
+    left: 15%;
 }

@@ -1,0 +1,104 @@
+.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    margin-top: 12px;
+}
+
+.container {
+    position: relative;
+    margin-bottom: -115px;
+}
+
+.clouds {
+    position: absolute;
+    width: 100vw;
+}
+
+.gif {
+    width: 20%;
+}
+
+.zineImg {
+    display: flex;
+    max-width: 28vw;
+    animation: floatUpDown 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+        /* Adjust the distance you want the image to float up and down */
+    }
+}
+
+.homepageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-grow: 1;
+    z-index: 999;
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.bansheeChase {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    top: 25px;
+    right: 10px;
+}
+
+.bansheeLeft {
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    left: 0;
+    top: 35vh;
+}
+
+.periodical {
+    position: absolute;
+    top: 0;
+    left: 12vw;
+    width: 20vw;
+    animation: floatUpDown2 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.bottom {
+    margin-top: 0px;
+    position: sticky;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.superKidSpeach {
+    position: sticky;
+    width: 75vw;
+    left: 15%;
+}

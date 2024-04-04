@@ -13,4 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const buttonElement1 = document.querySelector('.zineImg');
     addHoverListeners(buttonElement1, 'Zinebutton/zines.png', 'Zinebutton/zines2.png');
+
+    const buttonElement2 = document.querySelector('.periodical');
+    addHoverListeners(buttonElement2, 'Questions/Images/periodical_logo_2.png', '~/Questions/Images/periodical_logo.png');
 });

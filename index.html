@@ -5,9 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShadowBanshee</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/Index/normalize.css">
+    <link rel="stylesheet" href="/Index/index.css">
+    <link rel="stylesheet" href="/Index/home.css">
+    <script src="Index/main.js"></script>
 </head>
 
 <body>
@@ -20,22 +21,24 @@
     <div class="container">
         <img src="clouds.gif" class="clouds">
         <div class="homepageContent">
-            <img class=gif src="background/eye2.gif">
+            <img class=gif src="Index/Background/eye.gif">
             <div class="button">
                 <button type="button" class="zineImg" onclick="window.location.href='shop.html';">
-                    <img src="Zinebutton/zines.png" />
+                    <img class=buttonJS src="Zinebutton/zines.png">
                 </button>
             </div>
             <div class="edge">
-                <img src="background/bansheeleft.png" class="bansheeLeft">
-                <img src="background/bansheeChase.png" alt="" class="bansheeChase">
+                <img src="Index/Background/bansheeleft.png" class="bansheeLeft">
+                <button type="button" class="periodical" onclick="window.location.href='Questions/questions.html'">
+                    <img class="buttonJS" src="Questions/Images/periodical_logo_2.png">
+                </button>
+                <img src="Index/Background/bansheeChase.png" alt="" class="bansheeChase">
             </div>
         </div>
     </div>
     <div class="bottom">
-        <img src="background/superkidspeechbubble.png" class="superKidSpeach">
+        <img src="Index/Background/superkidspeechbubble.png" class="superKidSpeach">
     </div>
-    <script src="main.js"></script>
 </body>
 
 </html>
