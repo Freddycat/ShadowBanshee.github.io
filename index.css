@@ -3,7 +3,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
-    margin-bottom: 25px;
+    margin-top: 12px;
 }
 
 .container {
@@ -64,10 +64,10 @@
 
 .bansheeLeft {
     position: absolute;
-    width: 23vw;
+    width: 20vw;
     height: auto;
     left: 0;
-    top: 30v;
+    top: 35vh;
 }
 
 .periodical {

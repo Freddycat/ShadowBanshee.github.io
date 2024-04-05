@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background: url(background/bg.png) no-repeat left top;
+    font-family: "AlterEgo BB W00 Regular"; 
+    background: url(Index/Background/bg.png) no-repeat left top;
     background-size: cover;
     min-height: 100vh;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ button img {
 }
 
 button img:hover {
-    transform: scale(1.1);
+    transform: scale(1.25);
 }
 
 .buttonCSS {
@@ -40,6 +40,7 @@ button img:hover {
     display: flex;
     justify-content: center;
     transition: transform 0.25s;
+    margin-top: 0;
 }
 
 .home {
