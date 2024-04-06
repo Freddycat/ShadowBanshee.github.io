@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="questions.css">
-    
-    <script type="text/javascript">
-        var onloadCallback = function () {
-            alert("grecaptcha is ready!");
-        };
-    </script>
-
     <script src="https://www.google.com/recaptcha/api.js?" async defer>
     </script>
 
@@ -43,7 +36,7 @@
         <input class="contact text" placeholder="@ or Business (optional)">
         <p>LEAVE BLANK FOR -ANONYMOUS</p>
         <textarea class="question text" placeholder="Your Question Here"></textarea>
-        <div class="g-recaptcha" data-sitekey="6LfN_qcpAAAAADip26Nh14bpch3kTr36TxItXmdK" data-callback="enableSubmit">
+        <div class="g-recaptcha" data-sitekey="6LfN_qcpAAAAADip26Nh14bpch3kTr36TxItXmdK">
         </div>
         <button id="submit" disabled>Submit</button>
     </form>
