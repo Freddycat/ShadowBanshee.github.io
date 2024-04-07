@@ -1,3 +1,5 @@
+// send.js
+
 document.addEventListener('DOMContentLoaded', function () {
     // Add event listener to the submit button
     document.getElementById('submit').addEventListener('click', function (event) {
