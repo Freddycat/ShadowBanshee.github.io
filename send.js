@@ -1,5 +1,3 @@
-// send.js
-
 document.addEventListener('DOMContentLoaded', function () {
     // Add event listener to the submit button
     document.getElementById('submit').addEventListener('click', function (event) {
@@ -14,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Submit the form
                 submitFormData();
                 console.log('reCAPTCHA executed successfully'); // Add this line
+                
+                // Enable the submit button
+                document.getElementById('submit').removeAttribute('disabled');
             }).catch(function (error) {
                 console.error('Error executing reCAPTCHA:', error);
             });
