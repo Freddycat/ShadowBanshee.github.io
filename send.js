@@ -13,11 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSubmitButton(); // Update submit button status
     });
 
-    // Add event listener to the form for form submission
-    document.querySelector('form').addEventListener('submit', function (event) {
-        // Prevent the default form submission behavior
-        event.preventDefault();
-
+    // Function to submit form data
+    function submitFormData() {
         // Get form data
         const name = document.querySelector('.name').value || 'Anonymous';
         const question = document.querySelector('.question').value;
@@ -49,5 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error submitting question:', error);
             alert('An error occurred. Please try again later.');
         });
+    }
+
+    // Add event listener to the form for form submission
+    document.querySelector('form').addEventListener('submit', function (event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        
+        // Submit the form data
+        submitFormData();
     });
 });
