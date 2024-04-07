@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('g-recaptcha-response').value = token;
                 // Submit the form
                 submitFormData();
-                console.log('reCAPTCHA executed successfully'); // Add this line
-                
-                // Enable the submit button
-                document.getElementById('submit').removeAttribute('disabled');
             }).catch(function (error) {
                 console.error('Error executing reCAPTCHA:', error);
             });
@@ -51,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.contact').value = '';
             // Show success message
             alert('Question submitted successfully!');
+            
+            // Enable the submit button after successful submission
+            document.getElementById('submit').removeAttribute('disabled');
         }).catch(function (error) {
             console.error('Error submitting question:', error);
             alert('An error occurred. Please try again later.');
