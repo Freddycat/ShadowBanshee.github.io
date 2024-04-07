@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Question submitted successfully!');
             
             // Enable the submit button after successful submission
-            document.getElementById('submit').removeAttribute('disabled');
+            document.getElementById('submit').disabled = false;
         }).catch(function (error) {
             console.error('Error submitting question:', error);
             alert('An error occurred. Please try again later.');
