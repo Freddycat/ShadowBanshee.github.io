@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="questions.css">
-    <script src="https://www.google.com/recaptcha/api.js?">
-    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="send.js"></script>
 
     <link href="https://db.onlinewebfonts.com/c/dfb3844c6834f75c91f844559732e9a4?family=AlterEgo+BB+W00+Regular"
         rel="stylesheet">
@@ -29,25 +32,19 @@
         <img src="Questions/Images/example_question.png" class="example_question">
         <img src="Questions/Images/speghatti_question.png" class="speghatti_question">
     </div>
-    <form class="container">
+    <form id="questionForm" class="container">
         <img class="buttonHeader" src="Questions/Images/periodical_logo.png" alt="">
         <p>LEAVE THE INFO YOU WANT DISPLAYED IN MY ZINE :)</p>
         <input class="name text" placeholder="Name (optional)">
         <input class="contact text" placeholder="@ or Business (optional)">
         <p>LEAVE BLANK FOR -ANONYMOUS</p>
         <textarea class="question text" placeholder="Your Question Here"></textarea>
-        <div class="g-recaptcha" data-sitekey="6LfN_qcpAAAAADip26Nh14bpch3kTr36TxItXmdK">
-        </div>
-        <button id="submit" disabled>Submit</button>
+        <button id="submit">Submit</button>
     </form>
     <div class="bottom">
         <img src="Questions/Images/peter_question.png" class="peter_question">
         <img src="Questions/Images/superkid_quesion.png" class="superkid_quesion">
     </div>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
-    <script src="firebase-config.js"></script>
-    <script src="send.js"></script>
     <script src="main.js"></script>
 </body>
 
