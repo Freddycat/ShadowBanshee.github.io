@@ -1,0 +1,46 @@
+.clouds {
+    position: absolute;
+    width: 100vw;
+    z-index: -100;
+}
+
+.container {
+    margin: 25px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#question {
+    margin-left: 25px;
+    max-width: 22vw;
+    align-self: center;
+    animation: floatUpDown 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+#periodical {
+    margin-right: 25px;
+    max-width: 30vw;
+    align-self: center;
+    animation: floatUpDown2 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { element: document.querySelector('.home'), original: 'title/Oneeyedsuperkid.png', hover: 'title/Oneeyedsuperkidhover.png' },
         { element: document.querySelector('.banshee_JS'), original: 'Shop/ZineButtons/bansheebutton1.png', hover: 'Shop/ZineButtons/bansheebutton2.png' },
         { element: document.querySelector('.dream_JS'), original: 'Shop/ZineButtons/dreambutton1.png', hover: 'Shop/ZineButtons/dreambutton2.png' },
-        { element: document.querySelector('.super_JS'), original: 'Shop/ZineButtons/superkidbutton1.png', hover: 'Shop/ZineButtons/superkidbuttonopen2.png' },
+        { element: document.querySelector('.super_JS'), original: 'Shop/ZineButtons/superkidbutton2.png', hover: 'Shop/ZineButtons/superkidbuttonopen2.png' },
         { element: document.querySelector('.Img1'), original: 'BansheePage/Banshee_POT.png', hover: 'BansheePage/Banshee_POTG.png' },
     ];
 

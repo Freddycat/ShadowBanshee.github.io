@@ -1,5 +1,5 @@
 p {
-    font-family: "AlterEgo BB W00 Regular"; 
+    font-family: "AlterEgo";
     font-size: 12px;
 }
 
@@ -30,7 +30,6 @@ button {
 .name {
     width: 116px;
     margin: 0 auto;
-    font-family: "AlterEgo BB W00 Regular";
 }
 
 .question {
@@ -47,7 +46,7 @@ button {
 }
 
 .text {
-    font-family: "AlterEgo BB W00 Regular";
+    font-family: "AlterEgo";
     font-size: 12px;
     background-color: rgba(122, 170, 231, 0.671);
     border: 1.5px solid #0084ff9a;
@@ -115,13 +114,37 @@ button {
     width: 24vw;
 }
 
+@media only screen and (min-width: 768px) {
+    /* Styles for wider views */
+    .superkid_quesion {
+        position: absolute;
+        bottom: 80px;
+        left: 5%;
+        max-width: 250px;
+        width: 24vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* Styles for narrower views */
+    .superkid_quesion {
+        position: absolute;
+        bottom: 80px;
+        left: 0px;
+        max-width: 250px;
+        width: 24vw;
+    }
+
+}
+
 .bottom {
     padding-top: 20px;
     position: relative;
 }
 
 #submit {
-    font-family: "AlterEgo BB W00 Regular";
+    font-family: "AlterEgo";
     font-size: 12px;
     background-color: rgba(122, 170, 231, 0.671);
     border: 1.5px solid #0084ff9a;

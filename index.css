@@ -48,26 +48,69 @@
 }
 
 .edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    position: static;
 }
 
-.bansheeChase {
-    position: absolute;
-    width: 30vw;
-    height: auto;
-    top: 25px;
-    right: 10px;
+@media only screen and (min-width: 768px) {
+    /* Styles for wider desktop views */
+
+    .bansheeLeft {
+        position: absolute;
+        width: 25vw;
+        max-width: 280px;
+        height: auto;
+        left: 0;
+        top: 55%;
+    }
+
+    .bansheeChase {
+        position: absolute;
+        width: 30vw;
+        height: auto;
+        top: 25px;
+        right: 10px;
+    }
 }
 
-.bansheeLeft {
-    position: absolute;
-    width: 20vw;
-    height: auto;
-    left: 0;
-    top: 35vh;
+@media only screen and (max-width: 767px) {
+
+    /* Styles for narrower views */
+    .bansheeLeft {
+        position: absolute;
+        width: 35%;
+        max-width: 175px;
+        height: auto;
+        left: 0;
+        top: 200px;
+    }
+
+    .bansheeChase {
+        position: absolute;
+        width: 30vw;
+        height: auto;
+        top: 25px;
+        right: 10px;
+    }
+}
+
+@media only screen and (max-height: 578px) and (max-width: 767px) {
+
+    .bansheeLeft {
+        position: absolute;
+        width: 25%;
+        max-width: 125px;
+        height: auto;
+        top: 50%;
+    }
+
+    .bansheeChase {
+        position: absolute;
+        width: 30vw;
+        height: auto;
+        top: auto;
+        right: 0;
+        bottom: 112px;
+    }
 }
 
 .periodical {
@@ -89,7 +132,7 @@
 }
 
 .bottom {
-    margin-top: 0px;
+    margin-top: 45px;
     position: sticky;
     top: 100%;
     bottom: 0;
@@ -98,7 +141,7 @@
 }
 
 .superKidSpeach {
-    position: sticky;
+    position: relative;
     width: 75vw;
     left: 15%;
 }

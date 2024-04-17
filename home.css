@@ -1,9 +1,22 @@
+@font-face {
+    font-family: 'AlterEgo';
+    src: url('Index/font/AlterEgo.ttf') format('truetype');
+}
+
 body {
-    font-family: "AlterEgo BB W00 Regular"; 
+    font-family: 'AlterEgo', sans-serif;
     background: url(Index/Background/bg.png) no-repeat left top;
     background-size: cover;
     min-height: 100vh;
     box-sizing: border-box;
+}
+
+.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    margin-top: 12px;
 }
 
 img {
