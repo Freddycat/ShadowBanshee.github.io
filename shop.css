@@ -85,8 +85,8 @@ div.buttons {
     top: 43%;
     left: 44%;
     transform: translate(-50%, -50%);
-    width: 35%;
-    height: 45%;
+    width: 25%;
+    height: 35%;
     transition: transform 0.25s;
 }
 
@@ -124,8 +124,8 @@ div.buttons {
     top: 44%;
     left: 47%;
     transform: translate(-50%, -50%);
-    width: 29%;
-    height: 29%;
+    width: 22%;
+    height: 22%;
     transition: transform 0.25s;
 }
 

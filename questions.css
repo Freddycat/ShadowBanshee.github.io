@@ -84,28 +84,6 @@ button {
     width: 100vw;
 }
 
-.example_question {
-    position: absolute;
-    top: 115px;
-    left: 4vw;
-    width: 25vw;
-}
-
-.peter_question {
-    position: absolute;
-    bottom: 0vh;
-    right: 5px;
-    width: 25vw;
-    max-width: 240px;
-}
-
-.speghatti_question {
-    position: absolute;
-    top: 5vh;
-    right: 25px;
-    width: 20vw;
-}
-
 .superkid_quesion {
     position: absolute;
     bottom: 80px;
@@ -115,6 +93,7 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
+
     /* Styles for wider views */
     .superkid_quesion {
         position: absolute;
@@ -123,6 +102,28 @@ button {
         max-width: 250px;
         width: 24vw;
     }
+
+    .speghatti_question {
+        position: absolute;
+        top: 5vh;
+        right: 125px;
+        width: 20vw;
+    }
+
+    .example_question {
+        position: absolute;
+        top: 115px;
+        left: 4vw;
+        width: 25vw;
+    }
+
+    .peter_question {
+        position: absolute;
+        bottom: 0vh;
+        right: 5px;
+        width: 25vw;
+        max-width: 240px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -130,10 +131,32 @@ button {
     /* Styles for narrower views */
     .superkid_quesion {
         position: absolute;
-        bottom: 80px;
-        left: 0px;
+        bottom: 180px;
+        left: -2px;
         max-width: 250px;
         width: 24vw;
+    }
+
+    .speghatti_question {
+        position: absolute;
+        top: 135px;
+        right: 25px;
+        width: 20vw;
+    }
+
+    .example_question {
+        position: absolute;
+        top: 100px;
+        left: 5px;
+        width: 25vw;
+    }
+
+    .peter_question {
+        position: absolute;
+        bottom: 40px;
+        right: 0px;
+        width: 25vw;
+        max-width: 240px;
     }
 
 }
