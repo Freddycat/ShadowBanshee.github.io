@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'AlterEgo';
-    src: url('Index/font/AlterEgo.ttf') format('truetype');
+    src: url('/Font/AlterEgo.ttf') format('truetype');
 }
 
 body {
     font-family: 'AlterEgo', sans-serif;
-    background: url(Index/Background/bg.png) no-repeat left top;
+    background: url(/Images/bg.png) no-repeat left top;
     background-size: cover;
     min-height: 100vh;
     box-sizing: border-box;

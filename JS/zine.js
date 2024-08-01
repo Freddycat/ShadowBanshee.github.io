@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const buttons = [
-        { element: document.querySelector('.home'), original: 'title/Oneeyedsuperkid.png', hover: 'title/Oneeyedsuperkidhover.png' },
-        { element: document.querySelector('.banshee_JS'), original: 'Shop/ZineButtons/bansheebutton1.png', hover: 'Shop/ZineButtons/bansheebutton2.png' },
-        { element: document.querySelector('.dream_JS'), original: 'Shop/ZineButtons/dreambutton1.png', hover: 'Shop/ZineButtons/dreambutton2.png' },
-        { element: document.querySelector('.super_JS'), original: 'Shop/ZineButtons/superkidbutton2.png', hover: 'Shop/ZineButtons/superkidbuttonopen2.png' },
-        { element: document.querySelector('.Img1'), original: 'BansheePage/Banshee_POT.png', hover: 'BansheePage/Banshee_POTG.png' },
+        { element: document.querySelector('.home'), original: 'Images/title/Oneeyedsuperkid.png', hover: 'Images/title/Oneeyedsuperkidhover.png' },
+        { element: document.querySelector('.banshee_JS'), original: 'Images/ZineButtons/bansheebutton1.png', hover: 'Images/ZineButtons/bansheebutton2.png' },
+        { element: document.querySelector('.dream_JS'), original: 'Images/ZineButtons/dreambutton1.png', hover: 'Images/ZineButtons/dreambutton2.png' },
+        { element: document.querySelector('.super_JS'), original: 'Images/ZineButtons/superkidbutton2.png', hover: 'Images/ZineButtons/superkidbuttonopen2.png' },
+        { element: document.querySelector('.Img1'), original: 'Images/Banshee_POT.png', hover: 'Images/Banshee_POTG.png' },
     ];
 
     buttons.forEach(button => {
@@ -39,3 +39,13 @@ function dreamlink() {
 function superkidlink() {
     scrollToSection('SuperKidSection');
 }
+
+
+function checkForHash() {
+    const hash = window.location.hash.substring(1); // Remove the '#' character
+    if (hash) {
+        scrollToSection(hash);
+    }
+}
+
+window.onload = checkForHash; // Ensure the scroll logic runs after the full page load

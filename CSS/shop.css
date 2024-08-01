@@ -18,7 +18,7 @@ div.buttons {
     margin-top: 25px;
     margin-bottom: 45px;
     position: relative;
-    background-image: url('Shop/ZineButtons/buttonbackground.gif');
+    background-image: url('/Images/ZineButtons/buttonbackground.gif');
     background-size: cover;
     background-position: center;
 }

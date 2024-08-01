@@ -5,77 +5,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zines</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/home.css">
+  <link rel="stylesheet" href="CSS/shop.css">
 
-  <link rel="preload" href="Shop/ZineButtons/bansheebutton2.png" as="image">
-  <link rel="preload" href="Shop/ZineButtons/dreambutton2.png" as="image">
-  <link rel="preload" href="Shop/ZineButtons/superkidbutton2.png" as="image">
-  <link rel="preload" href="BansheePage/Banshee_POTG.png" as="image">
+  <link rel="preload" href="Images/ZineButtons/bansheebutton2.png" as="image">
+  <link rel="preload" href="Images/ZineButtons/dreambutton2.png" as="image">
+  <link rel="preload" href="Images/ZineButtons/superkidbutton2.png" as="image">
+  <link rel="preload" href="Images/Banshee_POTG.png" as="image">
 
 </head>
 
 <body>
   <div class="buttonCSS">
     <button type="button" class="home" onclick="window.location.href='index.html'">
-      <img class="buttonJS" src="title/Oneeyedsuperkid.png"/>
+      <img class="buttonJS" src="Images/title/Oneeyedsuperkid.png"/>
     </button>
   </div>
   <div class="container">
-    <img src="clouds.gif" class="clouds">
+    <img src="Images/clouds.gif" class="clouds">
     <div class="buttons">
       <button type="button" class="banshee_JS" onmousedown="bansheelink('BansheeSection')">
-        <img class="buttonJS" src="Shop/ZineButtons/bansheebutton1.png">
+        <img class="buttonJS" src="Images/ZineButtons/bansheebutton1.png">
       </button>
       <button type="button" class="dream_JS" onmousedown="dreamlink('Dreamwalker')">
-        <img class="buttonJS" src="Shop/ZineButtons/dreambutton1.png">
+        <img class="buttonJS" src="Images/ZineButtons/dreambutton1.png">
       </button>
       <button type="button" class="super_JS" onmousedown="superkidlink('SuperKidSection')">
-        <img class="buttonJS" src="Shop/ZineButtons/superkidbutton2.png">
+        <img class="buttonJS" src="Images/ZineButtons/superkidbutton2.png">
       </button>
     </div>
   </div>
   <div class="BansheeSection">
     <video id="bansheeVideo" loop muted playsinline autoplay>
-      <source src="Shop/background/BansheeVideo.mp4" type="video/mp4">
+      <source src="Videos/BansheeVideo.mp4" type="video/mp4">
     </video>
     <div class="featured">
       <button type="button" class="Img1" onclick="link('https://oneeyedsuperkid.gumroad.com/l/tbask')">
-        <img src="BansheePage/Banshee_POT.png" class="buttonJS">
+        <img src="Images/Banshee_POT.png" class="buttonJS">
       </button>
     </div>
   </div>
   <div class="BansheeSection2">
       <button type="button" class="Img2" onclick="link('https://oneeyedsuperkid.gumroad.com/l/uxqdx')">
-        <img src="BansheePage/Head_Clouds_BW.png">
+        <img src="Images/Head_Clouds_BW.png">
       </button>
       <button type="button" class="Img3" onclick="link('https://oneeyedsuperkid.gumroad.com/l/onykd')">
-        <img src="BansheePage/Cont_Existing_BW.png">
+        <img src="Images/Cont_Existing_BW.png">
       </button>
       <button type="button" class="Img4" onclick="link('https://oneeyedsuperkid.gumroad.com/l/uqxpd')">
-        <img src="BansheePage/Head_Clouds.png">
+        <img src="Images/Head_Clouds.png">
       </button>
   </div>
   <div class="SuperKidSection">
     <video id="SuperKidVideo" loop muted playsinline autoplay>
-      <source src="Shop/background/SuperKidBgr.mp4" type="video/mp4">
+      <source src="Videos/SuperKidBgr.mp4" type="video/mp4">
     </video>
     <div class="SuperKidZines">
       <button type="button" class="Img5" onclick="link('https://oneeyedsuperkid.gumroad.com/l/edpry')">
-        <img src="Shop/Superkidpage/Superkidsinebutton1.png" class="zinebutton">
+        <img src="Images/Superkidsinebutton1.png" class="zinebutton">
       </button>
     </div>
   </div>
   <video class="Dreamwalker" loop muted playsinline autoplay>
-    <source src="Shop/Dreamwalker/Dreamwalker.mp4" type="video/mp4">
+    <source src="Videos/Dreamwalker.mp4" type="video/mp4">
   </video>
   <div id="backToTopBtn" title="Back to Top">Back to Top</div>
   </div>
-  <script src="Shop/top.js"></script>
-  <script src="Shop/resize.js"></script>
-  <script src="Shop/zine.js"></script>
-  <script src="Shop/zineAnim.js"></script>
+  <script src="JS/top.js"></script>
+  <script src="JS/resize.js"></script>
+  <script src="JS/zine.js"></script>
+  <script src="JS/zineAnim.js"></script>
 </body>
 
 </html>
