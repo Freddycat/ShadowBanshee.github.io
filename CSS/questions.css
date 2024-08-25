@@ -42,8 +42,8 @@ button {
 
 .question {
     margin: 0;
-    height: 240px;
-    width: 320px;
+    height: 33vh;
+    width: 33%;
     max-width: 50vw;
 }
 
