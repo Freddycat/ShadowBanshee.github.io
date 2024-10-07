@@ -1,11 +1,12 @@
 .container {
-    position: relative;
-    margin-bottom: -115px;
+    display: block;
+    margin-bottom: -20%;
 }
 
 .clouds {
-    position: absolute;
-    width: 100vw;
+    display: block;
+    margin-top: 15%;
+    height: auto;
 }
 
 .gif {
@@ -175,6 +176,7 @@ div.buttons {
 
 .superKidSpeach {
     position: relative;
+    margin-top: 5%;
     width: 75vw;
     left: 15%;
 }

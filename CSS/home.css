@@ -3,12 +3,15 @@
     src: url('/Font/AlterEgo.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Valden';
+    src: url('/Font/valden/Valden.otf') format('truetype');
+}
+
 body {
     font-family: 'AlterEgo', sans-serif;
     background: url(/Images/bg.png) no-repeat left top;
     background-size: cover;
-    min-height: 100vh;
-    box-sizing: border-box;
 }
 
 .title {

@@ -1,21 +1,97 @@
 .clouds {
     position: absolute;
     width: 100vw;
-    z-index: -100;
+    z-index: -999;
 }
 
-.container {
-    margin: 25px;;
+.center {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    width: 80vw;
+    margin: 0, auto;
+    height: auto;
+}
+
+.left {
+    align-items: center;
+    background-color: #4399CD;
+    border-radius: 16px;
+    width: 50vw;
+    padding: 1.5%;
+    margin: 1.5%;
+    padding-top: 9%;
+    padding-bottom: 3%;
+}
+
+#TSBP1 img {
+    margin: auto;
+    width: 80%;
+}
+
+#readMe {
+    position: relative;
+    top: -3vw;
+    transition: transform 0.25s ease, top 0.25s ease;
+}
+
+#page:hover + #readMe {
+    transform: translateY(4vw); /* Move the bottom image down */
+}
+
+.right {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+p:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
+p {
+    transition: transform 0.25s ease
+}
+
+.top-right {
+    border-radius: 16px;
+    background-color: #ffffff;
+    padding: 1.5%;
+    margin: 1.5%;
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    background-color: #8EE0FF;
+    padding: 1.5%;
+    margin: 1.5%;
 }
 
 #question {
-    margin-left: 25px;
-    max-width: 22vw;
-    align-self: center;
+    display: flex;
+    justify-content: flex-start;
     animation: floatUpDown 1.5s ease-in-out infinite alternate;
+}
+
+#adviceCol {
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+.text {
+    font-size: 1.5vw;
+}
+
+.text2 {
+    font-size: 1.4vw;
 }
 
 @keyframes floatUpDown {
@@ -29,10 +105,14 @@
 }
 
 #periodical {
-    margin-right: 25px;
-    max-width: 30vw;
-    align-self: center;
+    margin: auto;
+    width: 75%;
     animation: floatUpDown2 1.5s ease-in-out infinite alternate;
+}
+
+#subButton {
+    margin: auto;
+    width: 55%;
 }
 
 @keyframes floatUpDown2 {

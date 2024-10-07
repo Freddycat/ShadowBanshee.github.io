@@ -5,84 +5,89 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShadowBanshee</title>
+
   <link rel="stylesheet" href="CSS/normalize.css">
   <link rel="stylesheet" href="CSS/index.css">
   <link rel="stylesheet" href="CSS/home.css">
-  
-  <script src="JS/main.js"></script>
-
-  <link rel="preload" href="Images/zines2.png" as="image">
-  <link rel="preload" href="Images/Images/periodical_logo.png" as="image">
-  <link rel="preload" href="Images/ZineButtons/bansheebutton2.png" as="image">
-  <link rel="preload" href="Images/ZineButtons/dreambutton2.png" as="image">
-  <link rel="preload" href="Images/ZineButtons/superkidbutton2.png" as="image">
-  <link rel="preload" href="Images/Banshee_POTG.png" as="image">
+  <link rel="stylesheet" href="CSS/loader.css">
 
 </head>
 
 <body>
-  <div class="buttonCSS">
-    <button type="button" class="home" onclick="window.location.href='index.html'">
-      <img class=buttonJS src="Images/title/Oneeyedsuperkid.png" />
-    </button>
-  </div>
-  <img class=title src="Images/title/text.png">
-  <div class="container">
-    <img src="Images/clouds.gif" class="clouds">
-    <div class="homepageContent">
-      <img class=gif src="Images/eye.gif">
-      <button type="button" class="periodical" onclick="window.location.href='periodical.html'">
-        <img class="buttonJS" src="Images/periodical_logo_2.png">
-      </button>
-      <div class="button">
-        <button type="button" class="adviceImg" onclick="window.location.href='questions.html'">
-          <img class=buttonJS src="Images/Advice.png">
-        </button>
-      </div>
-      <div class="edge">
-        <img src="Images/bansheeleft.png" class="bansheeLeft">
-        <img src="Images/bansheeChase.png" alt="" class="bansheeChase">
-      </div>
+  <div id="loadingScreen">
+    <img src="Images/gif.gif" alt="">
+    <div id="loadingBarContainer">
+      <div id="loadingBar"></div>
     </div>
   </div>
-  <div class="container">
-    <img src="Images/clouds.gif" class="clouds">
-    <div class="buttons">
+  <div id="pageContent">
+    <div class="buttonCSS">
+      <button type="button" class="home" onclick="window.location.href='index.html'">
+        <img class=buttonJS src="Images/title/Oneeyedsuperkid.png" />
+      </button>
+    </div>
+    <img class=title src="Images/title/text.png">
+    <div class="container">
+      <img src="Images/clouds.gif" class="clouds">
+      <div class="homepageContent">
+        <img class=gif src="Images/eye.gif">
+        <button type="button" class="periodical" onclick="window.location.href='periodical.html'">
+          <img class="buttonJS" src="Images/periodical_logo_2.png">
+        </button>
+        <div class="button">
+          <button type="button" class="adviceImg" onclick="window.location.href='questions.html'">
+            <img class=buttonJS src="Images/Advice.png">
+          </button>
+        </div>
+        <div class="edge">
+          <img src="Images/bansheeleft.png" class="bansheeLeft">
+          <img src="Images/bansheeChase.png" alt="" class="bansheeChase">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="Images/clouds.gif" class="clouds">
+      <div class="buttons">
         <button type="button" class="banshee_JS" onmousedown="bansheelink2('BansheeSection')">
           <img class="buttonJS" src="Images/ZineButtons/bansheebutton1.png">
         </button>
 
         <script>
           function bansheelink2(section) {
-              window.location.href = 'shop.html#' + section;
+            window.location.href = 'shop.html#' + section;
           }
-      </script>
+        </script>
 
-      <button type="button" class="dream_JS" onmousedown="dreamlink2('Dreamwalker')">
-        <img class="buttonJS" src="Images/ZineButtons/dreambutton1.png">
-      </button>
+        <button type="button" class="dream_JS" onmousedown="dreamlink2('Dreamwalker')">
+          <img class="buttonJS" src="Images/ZineButtons/dreambutton1.png">
+        </button>
 
-      <script>
-        function dreamlink2(section) {
+        <script>
+          function dreamlink2(section) {
             window.location.href = 'shop.html#' + section;
-        }
-    </script>
+          }
+        </script>
 
-      <button type="button" class="super_JS" onmousedown="superkidlink2('SuperKidSection')">
-        <img class="buttonJS" src="Images/ZineButtons/superkidbutton2.png">
-      </button>
+        <button type="button" class="super_JS" onmousedown="superkidlink2('SuperKidSection')">
+          <img class="buttonJS" src="Images/ZineButtons/superkidbutton2.png">
+        </button>
 
-      <script>
-        function superkidlink2(section) {
+        <script>
+          function superkidlink2(section) {
             window.location.href = 'shop.html#' + section;
-        }
-    </script>
+          }
+        </script>
 
+      </div>
+    </div>
+    <div class="bottom">
+      <img src="Images/superkidspeechbubble.png" class="superKidSpeach">
     </div>
   </div>
-  <div class="bottom">
-    <img src="Images/superkidspeechbubble.png" class="superKidSpeach">
-  </div>
+  <script src="JS/main.js"></script>
+
+  <script src="JS/loading.js"></script>
+
 </body>
 
 </html>

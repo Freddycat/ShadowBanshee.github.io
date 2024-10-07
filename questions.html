@@ -8,45 +8,60 @@
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" href="CSS/questions.css">
+    <link rel="stylesheet" href="CSS/loader.css">
 
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
-    <script src="JS/firebase-config.js"></script>
-    <script src="JS/send.js"></script>
+    <link rel="preload" href="Images/gif.gif" as="image">
 
 </head>
 
 <body>
-    <div class="buttonCSS">
-        <button type="button" class="home" onclick="window.location.href='index.html'">
-            <img class=buttonJS src="Images/title/Oneeyedsuperkid.png" />
-        </button>
-    </div>
-    <img class=title src="Images/title/text.png">
-    <div class="container">
-        <img src="Images/clouds.gif" class="clouds">
-    </div>
-    <div class="edge">
-        <img src="Images/example_question.png" class="example_question">
-        <img src="Images/speghatti_question.png" class="speghatti_question">
-        <img src="Images/issue2.png" class="issue2">
-    </div>
-    <form id="questionForm" class="container">
-        <button class="buttonHeader" onclick="window.location.href='periodical.html'">
-            <img src="Images/periodical_logo.png" alt="">
-        </button>
-        <p>LEAVE THE INFO YOU WANT DISPLAYED IN MY ZINE :)</p>
-        <input class="name text" placeholder="Name (optional)">
-        <input class="contact text" placeholder="@ or Business (optional)">
-        <p>LEAVE BLANK FOR -ANONYMOUS</p>
-        <textarea class="question text" placeholder="Your Question Here"></textarea>
-        <button id="submit">Submit</button>
-    </form>
-    <div class="bottom">
-        <img src="Images/peter_question.png" class="peter_question">
-        <img src="Images/superkid_quesion.png" class="superkid_quesion">
-    </div>
-    <script src="JS/main.js"></script>
-</body>
+
+    <body>
+        <div id="loadingScreen">
+            <img src="Images/gif.gif" alt="">
+            <div id="loadingBarContainer">
+                <div id="loadingBar"></div>
+            </div>
+        </div>
+        <div id="pageContent">
+            <div class="buttonCSS">
+                <button type="button" class="home" onclick="window.location.href='index.html'">
+                    <img class=buttonJS src="Images/title/Oneeyedsuperkid.png" />
+                </button>
+            </div>
+            <img class=title src="Images/title/text.png">
+            <div class="container">
+                <img src="Images/clouds.gif" class="clouds">
+            </div>
+            <div class="edge">
+                <img src="Images/example_question.png" class="example_question">
+                <img src="Images/speghatti_question.png" class="speghatti_question">
+                <img src="Images/issue2.png" class="issue2">
+            </div>
+            <form id="questionForm" class="container">
+                <button class="buttonHeader" onclick="window.location.href='periodical.html'">
+                    <img src="Images/periodical_logo.png" alt="">
+                </button>
+                <p>LEAVE THE INFO YOU WANT DISPLAYED IN MY ZINE :)</p>
+                <input class="name text" placeholder="Name (optional)">
+                <input class="contact text" placeholder="@ or Business (optional)">
+                <p>LEAVE BLANK FOR -ANONYMOUS</p>
+                <textarea class="question text" placeholder="Your Question Here"></textarea>
+                <button id="submit">Submit</button>
+            </form>
+            <div class="bottom">
+                <img src="Images/peter_question.png" class="peter_question">
+                <img src="Images/superkid_quesion.png" class="superkid_quesion">
+            </div>
+        </div>
+        <script src="JS/main.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database-compat.js"></script>
+        <script src="JS/firebase-config.js"></script>
+        <script src="JS/send.js"></script>
+
+        <script src="JS/loading.js"></script>
+    </body>
 
 </html>

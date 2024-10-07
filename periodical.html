@@ -8,34 +8,69 @@
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" href="CSS/periodical.css">
+    <link rel="stylesheet" href="CSS/loader.css">
 </head>
 
 <body>
-    <div class="buttonCSS">
-        <button type="button" class="home" onclick="window.location.href='index.html'">
-            <img class=buttonJS src="Images/title/Oneeyedsuperkid.png" />
-        </button>
-    </div>
-    <img class=title src="Images/title/text.png">
-    <div class="container">
-        <img src="Images/clouds.gif" class="clouds">
-    </div>
-    <div class="container">
-        <button id="periodical" onclick="window.location.href='https://oneeyedsuperkid.gumroad.com/l/theperiodical'">
-            <img src="Images/periodical_logo.png" alt="">
-            <p>subscribe to the periodical
-                <br>(it's free!)
-            </p>
-        </button>
-        <button id="question" onclick="window.location.href='questions.html'">
-            <img src="Images/Advice.png" alt="">
-            <p>Ask the Banshee questions
-                <br>to be answered in the next
-                <br>issue of the periodical!
-            </p>
-        </button>
+
+    <div id="loadingScreen">
+        <img src="Images/gif.gif" alt="">
+        <div id="loadingBarContainer">
+          <div id="loadingBar"></div>
+        </div>
+      </div>
+    <div id="pageContent">
+        <div class="buttonCSS">
+            <button type="button" class="home" onclick="window.location.href='index.html'">
+                <img class=buttonJS src="Images/title/Oneeyedsuperkid.png" />
+            </button>
+        </div>
+        <img class=title src="Images/title/text.png">
+        <div class="container">
+            <img src="Images/clouds.gif" class="clouds">
+        </div>
+        <div class="center">
+            <div class="container">
+                <div class="left">
+                    <button id="TSBP1" onclick="window.location.href='TSBP1.html'">
+                        <img id="page" src="Images/TSBP1/page1.png" alt="">
+                        <img id="readMe" src="Images/Periodical/Read me.png" alt="">
+                    </button>
+                </div>
+                <div class="right">
+                    <div class="top-right">
+                        <button id="question" onclick="window.location.href='questions.html'">
+                            <div id="adviceCol">
+                                <img src="Images/Advice.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <br>Ask the Banshee questions
+                                    to be answered in the next
+                                    issue of the periodical!
+                                </p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="bottom-right">
+                        <button id="periodical" type="button"
+                            onclick="javascript:window.open('https://oneeyedsuperkid.gumroad.com/l/theperiodical', '_blank');">
+                            <img src="Images/periodical_logo.png" alt="">
+                            <img id=subButton src="Images/Periodical/sub button.png" alt="">
+                            <div class="text2">
+                                <p>
+                                    Sign up for the Shadow Banshee<br>
+                                    Periodical Subscription on Gumroad!
+                                </p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="JS/main.js"></script>
+    <script src="JS/loading.js"></script>
 </body>
 
 </html>
