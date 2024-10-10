@@ -1,6 +1,5 @@
 .container {
     display: block;
-    margin-bottom: -20%;
 }
 
 .clouds {
@@ -137,8 +136,7 @@ div.buttons {
     max-width: 600px;
     width: 50vw;
     margin: 0 auto;
-    margin-top: 30%;
-    margin-bottom: 45px;
+    margin-top: 5%;
     position: relative;
     background-image: url('/Images/ZineButtons/buttonbackground.gif');
     background-size: cover;
@@ -147,7 +145,7 @@ div.buttons {
 
 .buttons button {
     max-width: 50%;
-    ;
+    z-index: 999;
 }
 
 .buttons button img {
@@ -165,18 +163,9 @@ div.buttons {
     margin-bottom: 0;
 }
 
-.bottom {
-    margin-top: 45px;
-    position: sticky;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
 .superKidSpeach {
     position: relative;
-    margin-top: 5%;
+    margin-top: -15%;
     width: 75vw;
     left: 15%;
 }

@@ -8,10 +8,10 @@
     src: url('/Font/valden/Valden.otf') format('truetype');
 }
 
-body {
-    font-family: 'AlterEgo', sans-serif;
-    background: url(/Images/bg.png) no-repeat left top;
+html, body {
+    background: url(/Images/bg.png) no-repeat center center fixed;
     background-size: cover;
+    font-family: 'AlterEgo', sans-serif;
 }
 
 .title {
