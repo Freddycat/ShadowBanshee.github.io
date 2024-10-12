@@ -1,9 +1,3 @@
-.clouds {
-    position: absolute;
-    width: 100vw;
-    z-index: -999;
-}
-
 .center {
     display: flex;
     justify-content: center;

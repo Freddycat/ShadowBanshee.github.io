@@ -1,195 +1,39 @@
-.container {
-    position: relative;
-}
-
-.clouds {
-    position: absolute;
-    width: 100vw;
-}
-
-div.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
-    width: 75vw;
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 45px;
-    position: relative;
-    background-image: url('/Images/ZineButtons/buttonbackground.gif');
-    background-size: cover;
-    background-position: center;
-}
-
-.buttons button {
-    max-width: 50%;
-    ;
-}
-
-.buttons button img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    transition: transform 0.25s;
-}
-
-.buttons img:hover {
-    transform: scale(1.3);
-}
-
-.buttons button img:last-child {
-    margin-bottom: 0;
-}
-
-.home,
-.banshee_JS,
-.dream_JS,
-.super_JS,
-.Img1 {
-    position: relative;
-}
-
-.BansheeSection {
-    position: relative;
-    width: 100vw;
-    max-width: 100vw;
+#shop {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-}
-
-#bansheeVideo {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.featured {
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.Img1 {
-    position: absolute;
-    top: 43%;
-    left: 44%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: 35%;
-    transition: transform 0.25s;
-}
-
-.Img1:hover {
-    transform: translate(-50%, -50%) scale(1.5);
-}
-
-.BansheeSection2 {
-    background-color: black;
-    position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    height: 400px;
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.Img2,
-.Img3,
-.Img4 {
-    position: relative;
-    transition: transform 0.25s;
-    width: 15%;
-    height: 50%;
+#filter {
+    margin-top: 5%;
+    margin-right: 35%;
+    margin-bottom: 5%;
 }
 
-.Img3 {
-    width: 20%;
-    height: 75%;
-}
-
-.Img5 {
-    position: absolute;
-    top: 44%;
-    left: 47%;
-    transform: translate(-50%, -50%);
-    width: 22%;
-    height: 22%;
-    transition: transform 0.25s;
-}
-
-.Img5:hover {
-    transform: translate(-50%, -50%) scale(1.6);
-}
-
-.SuperKidSection {
-    position: relative;
-    width: 100vw;
-    max-width: 100%;
-    height: auto;
-    background-image: url('Shop/Superkidpage/superkidbackground2.gif');
-    background-size: 100% auto;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-}
-
-#SuperKidVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.SuperKidZines {
-    position: absolute;
-    width: 100vw;
-    max-width: 100vw;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.Dreamwalker {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-}
-
-#backToTopBtn {
-    font-family: "AlterEgo BB W00 Regular"; 
-    display: none;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: rgba(160, 160, 160, 0.75);
-    text-shadow: 1px 1px 0 #000000;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 32px;
+#filter button{
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border: 1px solid black;
     cursor: pointer;
-    transition: color 0.3s;
 }
 
-#backToTopBtn:hover {
-    font-family: "AlterEgo BB W00 Regular"; 
-    color: rgba(50, 50, 50, 1);
+#shopSpace {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 40vh;
+    border-radius: 1vw;
+    border-style: solid;
+    border: 1px solid black;
 }
+
+.content {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    margin: 3%;
+    border-radius: 1vw;
+    border-style: solid;
+    border: 1px solid black;
+}
+

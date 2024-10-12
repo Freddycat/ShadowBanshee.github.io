@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zines</title>
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/home.css">
+  <link rel="stylesheet" href="CSS/explore.css">
+  <link rel="stylesheet" href="CSS/loader.css">
+
+  <link rel="preload" href="Images/gif.gif" as="image">
+  
+</head>
+
+<body>
+
+  <body>
+    <div id="loadingScreen">
+      <img src="Images/gif.gif" alt="">
+      <div id="loadingBarContainer">
+        <div id="loadingBar"></div>
+      </div>
+    </div>
+    <div id="pageContent">
+      <div class="header">
+        <button type="button" class="home" onclick="window.location.href='index.html'">
+          <img class="buttonJS" src="Images/title/Oneeyedsuperkid.png" />
+        </button>
+      </div>
+      <div class="container">
+        <img src="Images/clouds.gif" class="clouds">
+        <div class="buttons">
+          <button type="button" class="banshee_JS" onmousedown="bansheelink('BansheeSection')">
+            <img class="buttonJS" src="Images/ZineButtons/bansheebutton1.png">
+          </button>
+          <button type="button" class="dream_JS" onmousedown="dreamlink('Dreamwalker')">
+            <img class="buttonJS" src="Images/ZineButtons/dreambutton1.png">
+          </button>
+          <button type="button" class="super_JS" onmousedown="superkidlink('SuperKidSection')">
+            <img class="buttonJS" src="Images/ZineButtons/superkidbutton2.png">
+          </button>
+        </div>
+      </div>
+      <div class="BansheeSection">
+        <video id="bansheeVideo" loop muted playsinline autoplay>
+          <source src="Videos/BansheeVideo.mp4" type="video/mp4">
+        </video>
+        <div class="featured">
+          <button type="button" class="Img1" onclick="link('https://oneeyedsuperkid.gumroad.com/l/tbask')">
+            <img src="Images/Banshee_POT.png" class="buttonJS">
+          </button>
+        </div>
+      </div>
+      <div class="BansheeSection2">
+        <button type="button" class="Img2" onclick="link('https://oneeyedsuperkid.gumroad.com/l/uxqdx')">
+          <img src="Images/Head_Clouds_BW.png">
+        </button>
+        <button type="button" class="Img3" onclick="link('https://oneeyedsuperkid.gumroad.com/l/onykd')">
+          <img src="Images/Cont_Existing_BW.png">
+        </button>
+        <button type="button" class="Img4" onclick="link('https://oneeyedsuperkid.gumroad.com/l/uqxpd')">
+          <img src="Images/Head_Clouds.png">
+        </button>
+      </div>
+      <div class="SuperKidSection">
+        <video id="SuperKidVideo" loop muted playsinline autoplay>
+          <source src="Videos/SuperKidBgr.mp4" type="video/mp4">
+        </video>
+        <div class="SuperKidZines">
+          <button type="button" class="Img5" onclick="link('https://oneeyedsuperkid.gumroad.com/l/edpry')">
+            <img src="Images/Superkidsinebutton1.png" class="zinebutton">
+          </button>
+        </div>
+      </div>
+      <video class="Dreamwalker" loop muted playsinline autoplay>
+        <source src="Videos/Dreamwalker.mp4" type="video/mp4">
+      </video>
+      <div id="backToTopBtn" title="Back to Top">Back to Top</div>
+    </div>
+    </div>
+    <script src="JS/loading.js"></script>
+    <script src="JS/top.js"></script>
+    <script src="JS/resize.js"></script>
+    <script src="JS/zine.js"></script>
+    <script src="JS/zineAnim.js"></script>
+  </body>
+
+</html>

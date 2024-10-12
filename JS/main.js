@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const buttons = [
-        { element: document.querySelector('.home'), original: '/Images/title/Oneeyedsuperkid.png', hover: '/Images/title/Oneeyedsuperkidhover.png' },
         { element: document.querySelector('.banshee_JS'), original: '/Images/ZineButtons/bansheebutton1.png', hover: '/Images/ZineButtons/bansheebutton2.png' },
         { element: document.querySelector('.dream_JS'), original: '/Images/ZineButtons/dreambutton1.png', hover: '/Images/ZineButtons/dreambutton2.png' },
         { element: document.querySelector('.super_JS'), original: '/Images/ZineButtons/superkidbutton2.png', hover: '/Images/ZineButtons/superkidbuttonopen2.png' },

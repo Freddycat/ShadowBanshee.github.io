@@ -9,11 +9,7 @@ body {
 }
 
 .clouds {
-    display: block;
     margin-top: 17%;
-    position: absolute;
-    width: 150%;
-    z-index: -999;
 }
 
 #book {

@@ -1,0 +1,38 @@
+
+#cart {
+    display: block;
+    position: fixed;
+    top: 5%;    /* Distance from the top */
+    right: 5%;  /* Distance from the right */
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 50%; /* Optional: makes it circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#cart-sidebar {
+    position: fixed;
+    top: 5%;
+    right: -300px; /* Hidden initially off-screen */
+    height: 90%;
+    width: 300px; /* Adjust width as needed */
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    z-index: 999;
+}
+
+/* Visible sidebar */
+#cart-sidebar.active {
+    right: 5%; /* Slide in from the right */
+}
+
+.cart-content {
+    padding: 20px;
+    overflow-y: auto;
+}
