@@ -16,7 +16,12 @@ function navigate(step) {
     showPage(currentPage);
 }
 
-// Initialize with the first page
+// Check URL for page parameter and set the initial page
+const urlParams = new URLSearchParams(window.location.search);
+const pageParam = parseInt(urlParams.get('page'), 10);
+currentPage = pageParam && pageParam >= 1 && pageParam <= totalPages ? pageParam : 1;
+
+// Initialize with the specified page or the first page
 showPage(currentPage);
 
 let isZoomed = false;  // Track whether we are zoomed in

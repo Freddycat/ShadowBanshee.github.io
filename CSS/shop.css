@@ -1,3 +1,50 @@
+#pageContent {
+    background-color: #ffffff;
+    padding-bottom: 50vh;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: transform 0.25s;
+    margin: 0, auto;
+}
+
+.shopHeader {
+    width: 40%;
+    margin-left: -3%;
+    margin-bottom: -23%;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 100vh;
+    width: 40%;
+    /*margin-top: 5%;
+    margin-left: 5%;*/
+    animation: floatUpDown 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+.title {
+    display: none;
+}
+
 #shop {
     display: flex;
     flex-direction: column;
@@ -5,35 +52,88 @@
 }
 
 #filter {
-    margin-top: 5%;
-    margin-right: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40%;
     margin-bottom: 5%;
+    z-index: 1;
+    text-align: center;
 }
 
 #filter button{
-    width: 10px;
-    height: 10px;
-    border-style: solid;
-    border: 1px solid black;
+    width: 15%;
     cursor: pointer;
+}
+
+#last {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    margin-top: -5%;
 }
 
 #shopSpace {
     display: flex;
     flex-direction: row;
-    width: 80vw;
-    height: 40vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75vw;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
     border-radius: 1vw;
-    border-style: solid;
-    border: 1px solid black;
+    background-color: rgba(118, 132, 255, 0.2);
+    margin-bottom: 25%;
 }
 
-.content {
-    height: 80%;
+.item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 20vw;
     aspect-ratio: 1 / 1;
+    text-align: center;
     margin: 3%;
-    border-radius: 1vw;
-    border-style: solid;
-    border: 1px solid black;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    transition: all 0.2s;
+    background-color: #ffffff;
+    font-size: 75%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    cursor: pointer;
 }
 
+.item.active {
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px #ffffff;
+    border: 2px solid #a06dff; /* Highlight */
+}
+
+.item img {
+    width: 100%;
+    margin: auto;
+}
+
+.item.active .ico {
+    width: 100%;
+    transform: scale(1.25);
+}
+
+h3 {
+    display: none;
+}
+
+.construction {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.construction img {
+    max-width: 60vh;
+    width: 55%;
+    margin: auto;
+}

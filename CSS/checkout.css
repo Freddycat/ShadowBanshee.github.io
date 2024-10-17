@@ -1,0 +1,126 @@
+#checkout {
+    position: fixed;
+    display: flex;
+    margin: auto;
+    left: 5%;
+    top: -150vh; /* Hidden initially off-screen */
+    height: 90%;
+    width: 90%; /* Adjust width as needed */
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+#checkout.active {
+    top: 5%;
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close {
+    width: fit-content;
+    position: relative;
+    padding: 1% 1.8%;
+    border-radius: 50%;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.cart-item-content {
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.cart-item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* Center align items vertically */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 1vw;
+}
+
+.cart-item-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.cart-item-image {
+    width: 15cqw;
+    /* Set a fixed width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Space between image and text */
+}
+
+.total-price {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    /* Space above the total price */
+    font-weight: bold;
+}
+
+.cart-item-price {
+    margin: auto;
+    margin-right: 10px; /* Space specifically for quantity */
+}
+
+.cart-item-quantity {
+    margin: auto;
+    margin-right: 10px; /* Space specifically for quantity */
+}
+
+.cart-item-name {
+    display: flex;
+    font-weight: bold; /* Make the name bold */
+}
+
+#checkout-items {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 1vw;
+    overflow: auto;
+}
+
+.checkout-form {
+    margin: 5%;
+    margin-top: -1%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#payment-form {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+input {
+    font-family: monospace;
+}

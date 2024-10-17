@@ -47,39 +47,53 @@
     </div>
     <div class="container">
       <img src="Images/clouds.gif" class="clouds">
-      <div class="buttons">
-        <button type="button" class="banshee_JS" onmousedown="bansheelink2('BansheeSection')">
-          <img class="buttonJS" src="Images/ZineButtons/bansheebutton1.png">
-        </button>
+      <div class="explore">
+        <div class="exploreHead">
+          <button class="exploreButton" onclick="window.location.href='explore.html'">
+            <img src="Images/exploreButton.png" alt="">
+          </button>
+        </div>
+        <div class="buttons">
+          <button type="button" class="banshee_JS" onmousedown="bansheelink2('BansheeSection')">
+            <img class="buttonJS" src="Images/ZineButtons/bansheebutton1.png">
+          </button>
 
-        <script>
-          function bansheelink2(section) {
-            window.location.href = 'explore.html#' + section;
-          }
-        </script>
+          <script>
+            function bansheelink2(section) {
+              window.location.href = 'explore.html#' + section;
+            }
+          </script>
 
-        <button type="button" class="dream_JS" onmousedown="dreamlink2('Dreamwalker')">
-          <img class="buttonJS" src="Images/ZineButtons/dreambutton1.png">
-        </button>
+          <button type="button" class="dream_JS" onmousedown="dreamlink2('dreamwalkerSection')">
+            <img class="buttonJS" src="Images/ZineButtons/dreambutton1.png">
+          </button>
 
-        <script>
-          function dreamlink2(section) {
-            window.location.href = 'explore.html#' + section;
-          }
-        </script>
+          <script>
+            function dreamlink2(section) {
+              window.location.href = 'explore.html#' + section;
+            }
+          </script>
 
-        <button type="button" class="super_JS" onmousedown="superkidlink2('SuperKidSection')">
-          <img class="buttonJS" src="Images/ZineButtons/superkidbutton2.png">
-        </button>
+          <button type="button" class="super_JS" onmousedown="superkidlink2('SuperKidSection')">
+            <img class="buttonJS" src="Images/ZineButtons/superkidbutton2.png">
+          </button>
 
-        <script>
-          function superkidlink2(section) {
-            window.location.href = 'explore.html#' + section;
-          }
-        </script>
+          <script>
+            function superkidlink2(section) {
+              window.location.href = 'explore.html#' + section;
+            }
+          </script>
 
+        </div>
       </div>
     </div>
+
+    <div class="shop">
+      <button class="shopButton" onclick="window.location.href='shop.html'">
+        <img src="Images/shop.png" alt="">
+      </button>
+    </div>
+
     <div class="bottom">
       <img src="Images/superkidspeechbubble.png" class="superKidSpeach">
     </div>

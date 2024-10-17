@@ -33,7 +33,7 @@ function bansheelink() {
 }
 
 function dreamlink() {
-    scrollToSection('Dreamwalker');
+    scrollToSection('dreamwalkerSection');
 }
 
 function superkidlink() {

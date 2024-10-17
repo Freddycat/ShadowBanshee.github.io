@@ -1,9 +1,3 @@
-body {
-    margin: 0;
-    font-family: 'Valden';
-    font-size: 2.25cqw;
-}
-
 .container {
     position: relative;
 }
@@ -20,6 +14,11 @@ body {
     padding: 5px;
     width: 80%;
     margin: 0 auto;
+}
+
+.pageTitle {
+    display: block;
+    text-align: center;
 }
 
 .book-page {
@@ -174,6 +173,7 @@ button {
     top: 54%;
     left: 1%;
     font-family: 'Valden';
+    font-size: 2.25cqw;
 }
 
 .text2 {
@@ -181,6 +181,7 @@ button {
     top: 49%;
     left: 50%;
     font-family: 'Valden';
+    font-size: 2.25cqw;
 }
 
 .centeredText {

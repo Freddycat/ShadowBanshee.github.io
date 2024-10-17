@@ -1,10 +1,22 @@
-.container {
-    position: relative;
+
+.explore {
+    margin-left: 37%;
+    width: 25%;
+    margin-bottom: -3%;
+
+    animation: floatUpDown 1s infinite alternate;
+
+    animation-timing-function: steps(3);
 }
 
-.clouds {
-    position: absolute;
-    width: 100vw;
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(-1%);
+    }
+
+    100% {
+        transform: translateY(1%);
+    }
 }
 
 div.buttons {
@@ -12,11 +24,11 @@ div.buttons {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 600px;
+    max-width: 90vh;
     width: 75vw;
     margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 45px;
+    margin-top: 3%;
+    margin-bottom: 3%;
     position: relative;
     background-image: url('/Images/ZineButtons/buttonbackground.gif');
     background-size: cover;
@@ -25,7 +37,6 @@ div.buttons {
 
 .buttons button {
     max-width: 50%;
-    ;
 }
 
 .buttons button img {
@@ -43,143 +54,220 @@ div.buttons {
     margin-bottom: 0;
 }
 
-.home,
-.banshee_JS,
-.dream_JS,
-.super_JS,
-.Img1 {
-    position: relative;
-}
-
 .BansheeSection {
+    max-width: 100vh;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
     position: relative;
-    width: 100vw;
-    max-width: 100vw;
+    border-radius: 3vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    padding-bottom: 15cqh;
 }
 
-#bansheeVideo {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+#bansheeHeader {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 65%;
 }
 
-.featured {
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.Img1 {
-    position: absolute;
-    top: 43%;
-    left: 44%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: 35%;
-    transition: transform 0.25s;
-}
-
-.Img1:hover {
-    transform: translate(-50%, -50%) scale(1.5);
-}
-
-.BansheeSection2 {
-    background-color: black;
-    position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Img2,
-.Img3,
-.Img4 {
-    position: relative;
-    transition: transform 0.25s;
+#advice {
     width: 15%;
-    height: 50%;
+    height: auto;
+    margin-left: 75%;
+    margin-top: -25%;
 }
 
-.Img3 {
-    width: 20%;
-    height: 75%;
+#door {
+    width: 40%;
+    margin-top: 10%;
+    margin-bottom: -65%;
+    margin-left: -3%;
 }
 
-.Img5 {
-    position: absolute;
-    top: 44%;
-    left: 47%;
-    transform: translate(-50%, -50%);
-    width: 22%;
-    height: 22%;
-    transition: transform 0.25s;
+#doorImage {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
 }
 
-.Img5:hover {
-    transform: translate(-50%, -50%) scale(1.6);
+#twisty {
+    position: relative;
+    width: 29%;
+    margin: auto;
+    margin-top: -2%;
+    margin-left: 68%;
+    top: -15%;
+}
+
+#periodical {
+    width: 40%;
+    margin: auto;
+    margin-top: -38%;
 }
 
 .SuperKidSection {
+    max-width: 100vh;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
     position: relative;
-    width: 100vw;
-    max-width: 100%;
-    height: auto;
-    background-image: url('Shop/Superkidpage/superkidbackground2.gif');
-    background-size: 100% auto;
-    background-position: center;
+    border-radius: 3vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
+    padding-bottom: 15cqh;
 }
 
-#SuperKidVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+.superWalk {
+    margin: auto;
+    margin-right: 5%;
+    width: 20%;
 }
 
-.SuperKidZines {
+.origin {
+    width: 28%;
+    margin: auto;
+    margin-top: -25%;
+}
+
+.mp3s {
+    width: 25%;
+    margin-left: 12%;
+    margin-top: -29%;
+
+    animation: floatUpDown 1s infinite alternate;
+
+    animation-timing-function: steps(2);
+}
+
+#book {
+    display: flex;
+    margin-top: -10%;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#bookDots {
+    display: none;
     position: absolute;
-    width: 100vw;
-    max-width: 100vw;
-    height: 100%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    left: 13%;
+    margin-top: 10%;
+}
+
+#bookDots::after {
+    content: ".";
+    /* Initial single dot */
+    animation: dots 1.33s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: ".";
+    }
+
+    33% {
+        content: "..";
+    }
+
+    66% {
+        content: "...";
+    }
+
+    100% {
+        content: "";
+    }
+}
+
+#comic.show-comic {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Full size */
+    z-index: 1;
+}
+
+#comic {
+    justify-content: center;
+    display: flex;
+    height: 30%;
+    max-width: 75vh;
+    width: 55vw;
+    background-color: #000fde6b;
+    border-radius: 3vw;
+    border-bottom-left-radius: 0%;
+    border: solid 1px aliceblue;
+    padding: 5%;
+    position: absolute;
+    left: 17%;
+    margin-top: 33%;
+    z-index: 0;
+    transform: scale(0); /* Initial scale (invisible) */
+    transition: transform 0.3s; /* Smooth scaling and fading */
+    transform-origin: bottom left;
+}
+
+#close {
+    width: fit-content;
+    position: absolute;
+    padding: 1% 1.8%;
+    border-radius: 50%;
+    background-color: aliceblue;
+    cursor: pointer;
+    right: 3%;
+    top: 5%;
+}
+
+.navigation-buttons {
+    gap: 25%;
+    width: 50%;
     display: flex;
     flex-direction: row;
+    position: absolute;
+    bottom: -25%;
 }
 
-.Dreamwalker {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
+.dreamwalkerSection {
+    max-width: 100vh;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 3vw;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15cqh;
+}
+
+.dreamWalkerHeader {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 80%;
+}
+
+.nimWalk {
+    width: 25%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
 
 #backToTopBtn {
-    font-family: "AlterEgo BB W00 Regular"; 
+    font-family: "AlterEgo";
     display: none;
     position: fixed;
     bottom: 10px;
     right: 10px;
-    color: rgba(160, 160, 160, 0.75);
+    color: rgba(0, 140, 255, 0.75);
     text-shadow: 1px 1px 0 #000000;
     border: none;
     border-radius: 5px;
@@ -190,6 +278,6 @@ div.buttons {
 }
 
 #backToTopBtn:hover {
-    font-family: "AlterEgo BB W00 Regular"; 
-    color: rgba(50, 50, 50, 1);
+    font-family: "AlterEgo";
+    color: rgb(154, 137, 252);
 }

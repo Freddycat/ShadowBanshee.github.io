@@ -1,38 +1,150 @@
+h2 {
+    margin: 5%;
+    border-radius: 1vw;
+    border-bottom: 1px solid #ccc;
+}
 
 #cart {
-    display: block;
     position: fixed;
-    top: 5%;    /* Distance from the top */
-    right: 5%;  /* Distance from the right */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 5%;
+    right: 5%;
     padding: 10px;
     background-color: #f8f8f8;
-    border-radius: 50%; /* Optional: makes it circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-    z-index: 1000;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 900;
     cursor: pointer;
+}
+
+.cart-item-content {
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #cart-sidebar {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     top: 5%;
-    right: -300px; /* Hidden initially off-screen */
+    right: -300px;
     height: 90%;
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
     background-color: #ffffff;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
     border-radius: 1vw;
     display: flex;
     flex-direction: column;
-    transition: right 0.3s ease; /* Smooth slide-in effect */
-    z-index: 999;
+    transition: right 0.3s ease;
+    z-index: 800;
+    overflow: auto;
 }
 
-/* Visible sidebar */
 #cart-sidebar.active {
-    right: 5%; /* Slide in from the right */
+    right: 5%;
 }
 
-.cart-content {
-    padding: 20px;
-    overflow-y: auto;
+#cart-sidebar button {
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 55%;
+}
+
+.cart-item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    /* Center align items vertically */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 1vw;
+}
+
+.cart-item-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.cart-item-image {
+    width: 15cqw;
+    /* Set a fixed width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Space between image and text */
+}
+
+.total-price {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    /* Space above the total price */
+    font-weight: bold;
+}
+
+.cart-item-price {
+    margin: auto;
+    margin-right: 10px; /* Space specifically for quantity */
+}
+
+.cart-item-quantity {
+    margin: auto;
+    margin-right: 10px; /* Space specifically for quantity */
+}
+
+.cart-item-name {
+    display: flex;
+    font-weight: bold; /* Make the name bold */
+}
+
+#count {
+    font-family: "AlterEgo";
+    text-align: center;
+    position: absolute;
+    background-color: red;
+    width: 50%;
+    border-radius: 50%;
+    color: white;
+    text-shadow: 0 0 5px black;
+    margin-left: 75%;
+    margin-bottom: 75%;
+
+    animation: floatUpDown 1s infinite alternate;
+
+    animation-timing-function: steps(2);
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(-3%);
+    }
+
+    100% {
+        transform: translateY(3%);
+    }
+}
+
+#checkout-button {
+    margin: 22%;
 }
