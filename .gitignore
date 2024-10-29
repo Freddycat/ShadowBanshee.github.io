@@ -76,6 +76,8 @@ JS/cart.js
 
 functions/
 node_modules/
+.vscode/
+accept-a-payment/
 
 .firebaserc
 
@@ -91,4 +93,8 @@ package.json
 package-lock.json
 database.rules.json
 
-.vscode/
+database-debug.log
+firebase-debug.log
+ui-debug.log
+
+shop backup.html
