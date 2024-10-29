@@ -203,14 +203,13 @@ a:hover {
 #List {
     justify-content: center;
     align-items: center;
-    max-width: 40%;
+    max-width: 50%;
     margin: 0, auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 5px;
-    width: 80%;
     margin: 0 auto;
     margin-top: 25%;
     overflow: hidden
