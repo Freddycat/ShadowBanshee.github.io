@@ -65,7 +65,12 @@ div.buttons {
     width: 90vw;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15cqh;
+    padding-bottom: 5%;
+}
+
+.BansheeSection a {
+    margin-top: 1%;
+    margin-left: 55%;
 }
 
 #bansheeHeader {
@@ -103,7 +108,7 @@ div.buttons {
 }
 
 #periodical {
-    width: 40%;
+    width: 44%;
     margin: auto;
     margin-top: -38%;
 }
@@ -119,7 +124,12 @@ div.buttons {
     width: 90vw;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15cqh;
+    padding-bottom: 5%;
+}
+
+.SuperKidSection a {
+    margin-top: -10%;
+    margin-left: 55%;
 }
 
 .superWalk {
@@ -129,7 +139,7 @@ div.buttons {
 }
 
 .origin {
-    width: 28%;
+    width: 38%;
     margin: auto;
     margin-top: -25%;
 }
@@ -245,20 +255,22 @@ div.buttons {
     width: 90vw;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15cqh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
 }
 
 .dreamWalkerHeader {
+    margin: auto;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-bottom: 5%;
     width: 80%;
 }
 
 .nimWalk {
-    width: 25%;
+    width: 45%;
     margin: auto;
     margin-top: 5%;
-    margin-bottom: 15%;
 }
 
 #backToTopBtn {
@@ -280,4 +292,12 @@ div.buttons {
 #backToTopBtn:hover {
     font-family: "AlterEgo";
     color: rgb(154, 137, 252);
+}
+
+a:hover {
+    transform: scale(1.3);
+}
+a {
+    font-size: 3cqw;
+    transition: all .3s ease-in-out;
 }
