@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     async function fetchStripePublicKey() {
-        const response = await fetch('http://127.0.0.1:5001/shadowbanshee-79c70/us-central1/api/stripe-public-key');
+        const response = await fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/stripe-public-key');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function fetchClientSecret(amount) {
-        const response = await fetch('http://127.0.0.1:5001/shadowbanshee-79c70/us-central1/api/createPaymentIntent', {
+        const response = await fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/createPaymentIntent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount, currency: 'usd', paymentMethodType: 'card' })
