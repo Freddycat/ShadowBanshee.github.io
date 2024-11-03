@@ -51,10 +51,16 @@ function updateCart() {
     const cartItemsContainer = document.getElementById("cart-items");
     cartItemsContainer.innerHTML = "";
 
-    cart.forEach(item => {
-        const cartItem = document.createElement("div");
-        cartItem.classList.add("cart-item");
-        cartItem.innerHTML = `
+    if (cart.length === 0) {
+        const emptyMessage = document.createElement("div");
+        emptyMessage.innerText = "Your cart is empty.";
+        cartItemsContainer.appendChild(emptyMessage);
+    } else {
+
+        cart.forEach(item => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.innerHTML = `
             <div class="cart-item-content">
                 <div class="cart-item-desc">
                     <img src="${item.image}" class="cart-item-image" />
@@ -67,13 +73,14 @@ function updateCart() {
                 <button onclick="removeFromCart('${item.name}')">Remove</button>
             </div>
         `;
-        cartItemsContainer.appendChild(cartItem);
-    });
+            cartItemsContainer.appendChild(cartItem);
+        });
 
-    const totalDisplay = document.createElement("div");
-    totalDisplay.classList.add("total-price");
-    totalDisplay.innerHTML = `<strong>Total: $${totalPrice.toFixed(2)}</strong>`;
-    cartItemsContainer.appendChild(totalDisplay);
+        const totalDisplay = document.createElement("div");
+        totalDisplay.classList.add("total-price");
+        totalDisplay.innerHTML = `<strong>Total: $${totalPrice.toFixed(2)}</strong>`;
+        cartItemsContainer.appendChild(totalDisplay);
+    }
 }
 
 // Remove item from cart
