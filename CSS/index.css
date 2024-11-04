@@ -1,3 +1,23 @@
+.advice {
+    position: absolute;
+    top: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 120vh;
+    width: 90vw;
+}
+
+.adviceImg {
+    width: 15%;
+
+    max-width: 10%;
+
+    height: 1%;
+    z-index: 999;
+    animation: floatUpDown2 2s ease-in-out infinite alternate;
+}
+
 .container {
     display: block;
 }
@@ -8,10 +28,24 @@
     width: 20%;
 }
 
-.periodical {
+.middle-buttons {
+    margin-top: -5%;
     display: flex;
-    max-width: 32vw;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.periodical {
+    margin-right: 5%;
+    width: 30%;
+    max-width: 70vh;
     animation: floatUpDown 1.5s ease-in-out infinite alternate;
+}
+
+.shop {
+    margin-left: 5%;
+    width: 25%;
+    max-width: 70vh;
 }
 
 @keyframes floatUpDown2 {
@@ -22,14 +56,6 @@
     100% {
         transform: translateY(5px);
     }
-}
-
-.adviceImg {
-    position: absolute;
-    top: 5%;
-    left: 12vw;
-    width: 15vw;
-    animation: floatUpDown2 2s ease-in-out infinite alternate;
 }
 
 @keyframes floatUpDown {
@@ -50,7 +76,7 @@
     justify-content: center;
     position: relative;
     flex-grow: 1;
-    z-index: 999;
+    z-index: 990;
 }
 
 .edge {
@@ -64,46 +90,15 @@
     max-width: 280px;
     height: auto;
     left: 0;
-    top: 75%;
+    top: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-    /* Styles for wider desktop views */
-
-
-    .bansheeChase {
-        position: absolute;
-        width: 30vw;
-        height: auto;
-        top: 25px;
-        right: 10px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-
-    /* Styles for narrower views */
-
-    .bansheeChase {
-        position: absolute;
-        width: 30vw;
-        height: auto;
-        top: 25px;
-        right: 10px;
-    }
-}
-
-@media only screen and (max-height: 578px) and (max-width: 767px) {
-
-
-    .bansheeChase {
-        position: absolute;
-        width: 30vw;
-        height: auto;
-        top: auto;
-        right: 0;
-        bottom: 112px;
-    }
+.bansheeChase {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    bottom: 0;
+    right: 0;
 }
 
 .clouds {
@@ -122,13 +117,12 @@
 .exploreHead {
     position: relative;
     margin: auto;
-    width: 50%;
-    margin-top: -3%;
-    margin-bottom: -7%;
+    width: 30%;
+    margin-bottom: -6%;
     z-index: 999;
 }
 
-.buttons {
+.explore-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -143,42 +137,61 @@
     background-position: center;
 }
 
-.buttons button {
+.explore-buttons button {
     max-width: 50%;
     z-index: 999;
 }
 
-.buttons button img {
+.explore-buttons button img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
     transition: transform 0.25s;
 }
 
-.buttons img:hover {
+.explore-buttons img:hover {
     transform: scale(1.3);
 }
 
-.buttons button img:last-child {
+.explore-buttons button img:last-child {
     margin-bottom: 0;
 }
 
 .superKidSpeach {
     position: relative;
-    margin-top: -15%;
-    width: 75vw;
+    margin-top: -12%;
+    width: 75%;
     left: 15%;
+    margin-bottom: -3%;
 }
 
-.shop {
-    margin-top: 3%;
+.social {
+    margin: auto;
+    width: 75%;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 5vh;
+}
+
+.social p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.social button {
+    margin: 5%;
+    width: 12%;
+    /* Adjust as needed */
+    display: flex;
+    align-items: center;
     flex-direction: column;
+    /* Stack icon and text vertically */
     justify-content: center;
 }
 
-.shopButton {
-    margin: auto;
-    width: 33%;
-    z-index: 999;
+a:hover {
+    cursor: pointer;
+    transform: scale(1.075);
 }

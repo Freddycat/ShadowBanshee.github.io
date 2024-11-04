@@ -7,8 +7,8 @@
   <title>oneeyedsuperkid</title>
 
   <link rel="stylesheet" href="CSS/normalize.css">
-  <link rel="stylesheet" href="CSS/index.css">
   <link rel="stylesheet" href="CSS/home.css">
+  <link rel="stylesheet" href="CSS/index.css">
   <link rel="stylesheet" href="CSS/loader.css">
 
 </head>
@@ -21,27 +21,45 @@
     </div>
   </div>
   <div id="pageContent">
+
     <div class="header">
-      <button type="button" class="home" onclick="window.location.href='index.html'">
+      <button class="home" type="button" onclick="window.location.href='index.html'">
         <img src="Images/title/Oneeyedsuperkid.png" />
         <p class=title>Home of The Shadow Banshee, The Dreamwalker, The Superkid and more... &nbsp &nbsp</p>
       </button>
+
+      <div class="advice">
+
+        <button class="adviceImg" style="visibility: hidden;">
+          <img src="Images/Advice.png">
+        </button>
+
+        <button class="adviceImg" onclick="window.location.href='questions.html'">
+          <img src="Images/Advice.png">
+        </button>
+
+      </div>
     </div>
+
     <div class="container">
       <img src="Images/clouds.gif" class="clouds">
       <div class="homepageContent">
         <img class=gif src="Images/eye.gif">
-        <button type="button" class="periodical" onclick="window.location.href='periodical.html'">
-          <img class="buttonJS" src="Images/periodical_logo_2.png">
-        </button>
-        <div class="button">
-          <button type="button" class="adviceImg" onclick="window.location.href='questions.html'">
-            <img class=buttonJS src="Images/Advice.png">
+
+        <div class="middle-buttons">
+
+          <button class="periodical" type="button" onclick="window.location.href='periodical.html'">
+            <img class="buttonJS" src="Images/periodical_logo_2.png">
           </button>
+
+          <button class="shop" onclick="window.location.href='shop.html'">
+            <img src="Images/shop.png" alt="">
+          </button>
+
         </div>
+
         <div class="edge">
           <img src="Images/bansheeleft.png" class="bansheeLeft">
-          <img src="Images/bansheeChase.png" alt="" class="bansheeChase">
         </div>
       </div>
     </div>
@@ -53,7 +71,7 @@
             <img src="Images/exploreButton.png" alt="">
           </button>
         </div>
-        <div class="buttons">
+        <div class="explore-buttons">
           <button type="button" class="banshee_JS" onmousedown="bansheelink2('BansheeSection')">
             <img class="buttonJS" src="Images/ZineButtons/bansheebutton1.png">
           </button>
@@ -88,16 +106,32 @@
       </div>
     </div>
 
-    <div class="shop">
-      <button class="shopButton" onclick="window.location.href='shop.html'">
-        <img src="Images/shop.png" alt="">
-      </button>
-    </div>
+
+    <img src="Images/bansheeChase.png" alt="" class="bansheeChase">
 
     <div class="bottom">
-      <img src="Images/superkidspeechbubble.png" class="superKidSpeach">
+      <img src="Images/social/superkidspeech.png" class="superKidSpeach">
+      <div class="social">
+        <button>
+          <img src="Images/social/instagram-button.png" onclick="window.open('https://www.instagram.com/oneeyedsuperkid/', '_blank')">
+          <a>Instagram</a>
+        </button>
+        <button>
+          <img src="Images/social/gumroad-button.png" onclick="window.open('https://oneeyedsuperkid.gumroad.com/', '_blank')">
+          <a>Gumroad Shop</a>
+        </button>
+        <button>
+          <img src="Images/social/youtube-button.png" onclick="window.open('https://www.youtube.com/@oneeyedsuperkid', '_blank')">
+          <a>YouTube</a>
+        </button>
+        <button>
+          <img src="Images/social/etsy-button.png" onclick="window.open('https://www.etsy.com/shop/Oneeyedsuperkid', '_blank')">
+          <a>ETSY Shop</a>
+        </button>
+      </div>
     </div>
   </div>
+
   <script src="JS/main.js"></script>
 
   <script src="JS/loading.js"></script>
