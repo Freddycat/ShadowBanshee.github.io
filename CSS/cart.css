@@ -28,9 +28,10 @@
     display: flex;
     justify-content: space-between;
     top: 5%;
-    right: -100%;
+    right: -120%;
     height: 90%;
     width: 335px;
+    max-width: 90%;
     background-color: #ffffff;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
     border-radius: 1vw;

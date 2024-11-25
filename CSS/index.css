@@ -97,7 +97,7 @@
     position: absolute;
     width: 20%;
     height: auto;
-    bottom: 0;
+    bottom: -5%;
     right: 0;
 }
 
@@ -175,13 +175,13 @@
     margin-bottom: 5vh;
 }
 
-.social p {
+.social a {
     margin: 0;
-    font-size: 16px;
+    font-size: 3cqw;
 }
 
 .social button {
-    margin: 5%;
+    margin: 7%;
     width: 12%;
     /* Adjust as needed */
     display: flex;
