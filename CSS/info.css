@@ -5,6 +5,7 @@
     left: 5%;
     bottom: -150vw;
     height: fit-content;
+    max-height: 90vh;
     width: 90%;
     background-color: #ffffff;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
@@ -23,7 +24,7 @@
     bottom: 5%;
 }
 
-.info button {
+.add-to-cart {
     min-width: 15vw;
     height: 10%;
     margin: 5%;
@@ -35,17 +36,9 @@
     font-size: 2vw;
 }
 
-.info button:hover {
+.add-to-cart:hover {
     background-color: #c6e3ff;
     transform: scale(1.15);
-}
-
-.info img {
-    margin: 1%;
-    max-height: 50vh;
-
-    max-width: 40vw;
-    width: auto;
 }
 
 .info .desc {
@@ -81,4 +74,54 @@
 .price {
     font-size: 2.8vw;
     margin-bottom: -3%;
+}
+
+
+.image-carousel {
+    max-height: 50vh;
+    width: 99%; /* Scales to the container's dynamic size */
+    height: calc(99% * 0.75);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin: 1%;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 5%;
+}
+
+.image-container img {
+    object-fit: cover; /* Ensures proper aspect ratio */
+    flex-shrink: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3vw;
+    width: 20%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all .2s;
+}
+.arrow:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
 }
