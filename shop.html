@@ -333,7 +333,18 @@
 
                     <div class="info">
                         <p class="X">X</p>
-                        <img src="Images/store/items/details/stickers.gif" alt="">
+
+                        <div class="image-carousel">
+                            <button class="arrow left"
+                                onclick="scrollImages(this, -1); event.stopPropagation()">&#9664;</button>
+                            <div class="image-container">
+                                <img src="Images/store/items/details/sticker1.jpg" alt="">
+                                <img src="Images/store/items/details/sticker2.jpg" alt="">
+                                <img src="Images/store/items/details/stickers.gif" alt="">
+                            </div>
+                            <button class="arrow right"
+                                onclick="scrollImages(this, 1); event.stopPropagation()">&#9654;</button>
+                        </div>
 
                         <div class="desc">
                             <p>SPREAD BANSHEE STICKERS</p>
