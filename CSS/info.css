@@ -4,8 +4,9 @@
     justify-content: space-between;
     left: 5%;
     bottom: -150vw;
-    height: fit-content;
-    max-height: 90vh;
+    height: 70%;
+    max-height: 60vw;
+    min-height: 45vh;
     width: 90%;
     background-color: #ffffff;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
@@ -15,7 +16,7 @@
     align-items: center;
     transition: bottom 0.15s ease;
     z-index: 800;
-    font-size: 3vw;
+    font-size: clamp(16px, 3vw, 5vh);
     font-weight: bolder;
     text-align: center;
 }
@@ -43,6 +44,7 @@
 
 .info .desc {
     padding: 0% 5%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -78,9 +80,8 @@
 
 
 .image-carousel {
-    max-height: 50vh;
     width: 99%; /* Scales to the container's dynamic size */
-    height: calc(99% * 0.75);
+    height: 99%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -92,12 +93,18 @@
 .image-container {
     display: flex;
     transition: transform 0.3s ease-in-out;
-    gap: 5%;
+    height: 100%;
+    width: 100%;
 }
 
 .image-container img {
-    object-fit: cover; /* Ensures proper aspect ratio */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     flex-shrink: 0;
+
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .arrow {
