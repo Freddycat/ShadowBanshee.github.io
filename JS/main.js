@@ -8,9 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         element.addEventListener('mouseout', () => handleButtonHover(element, false, original, hover));
     }
 
-    const buttonElement = document.querySelector('.home');
-    addHoverListeners(buttonElement, '/Images/title/Oneeyedsuperkid.png', '/Images/title/Oneeyedsuperkidhover.png');
-    
     const buttonElement2 = document.querySelector('.periodical');
     addHoverListeners(buttonElement2, '/Images/periodical_logo_2.png', '/Images/periodical_logo.png');
 });

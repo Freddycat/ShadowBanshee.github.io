@@ -14,25 +14,164 @@ button {
     height: auto;
 }
 
+#flex-container {
+    display: flex;
+    width: 80%;
+    height: 80vh;
+    max-height: 50vw;
+    margin: 0, auto;
+}
+
 .left {
     display: flex;
     flex-direction: column;
     background-color: #4399CD;
     border-radius: 16px;
     width: fit-content;
-    max-height: 65vh;
+    max-height: 100%;
     max-width: 50vw;
+    margin: 1.5%;
+    padding: 1.5%;
+}
+
+.right {
+    width: 50vw;
+    height: auto;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 25%;
+    border-radius: 16px;
+    background-color: #ffffff;
+    margin: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+#top-right-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#top-right-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.bottom-right {
+    max-height: 53%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #8EE0FF;
     padding: 1.5%;
     margin: 1.5%;
-    padding-top: 4vh;
-    padding-bottom: 3%;
-    margin: 0, auto;
+}
+
+#arrow {
+    width: 30%;
+    max-height: 40%;
+    margin: auto;
+}
+
+#read {
+    margin-top: 0%;
+    max-height: 5%;
+    font-size: 0.75rem;
+}
+
+.bottom-right-container {
+    max-width: 500px;
+    max-height: 500px;
+    margin: auto;
+    padding: 0%;
+    height: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#periodical {
+    margin: 0 auto;
+    width: 75%;
+    max-width: 45vh;
+    height: auto;
+    max-height: 50%;
+    animation: floatUpDown2 1.5s ease-in-out infinite alternate;
+}
+
+#subButton {
+    margin: 0 auto;
+    width: 55%;
+    height: auto;
+}
+
+.text2 {
+    margin: 0 auto;
+    font-size: 1.4vw;
 }
 
 #TSBP1 {
+    max-height: 90%;
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+#TSBP2 {
+    max-height: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-left {
+    transform: rotate(-12.75deg);
+    z-index: 2;
+    margin-right: -40%;
+}
+
+.card-right {
+    transform: rotate(12.75deg);
+    z-index: 1;
+    margin-left: -40%;
+}
+
+.card-right:hover {
+    z-index: 3;
+}
+
+.card {
+    max-width: fit-content;
+    border: 1px rgb(82, 51, 110) solid;
+    border-radius: 0.25vw;
+}
+
+.readMe {
+    position: relative;
+    transition: transform 0.25s ease, top 0.25s ease;
+    width: 75%;
+    max-height: 25vh;
+    margin-top: -15%;
+    z-index: 3;
 }
 
 #page {
@@ -40,68 +179,60 @@ button {
     max-height: 60vh;
 }
 
-#readMe {
-    position: relative;
-    transition: transform 0.25s ease, top 0.25s ease;
-    width: 75%;
-    max-height: 25vh;
-    top: -9%;
-}
-
-#page:hover+#readMe {
-    transform: translateY(4vw);
+.card:hover+.readMe {
+    transform: translateY(-4%);
+    transform: scale(0.9);
     /* Move the bottom image down */
 }
 
-.right {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-}
 
-p:hover {
+#flex-container p:hover {
     transform: scale(1.25);
     cursor: pointer;
 }
 
-p {
+#flex-container p {
     transition: transform 0.25s ease
 }
 
-.top-right {
-    border-radius: 16px;
-    background-color: #ffffff;
-    padding: 1.5%;
-    margin: 1.5%;
-}
-
-.bottom-right {
-    display: flex;
-    flex-direction: row;
-    border-radius: 16px;
-    background-color: #8EE0FF;
-    padding: 1.5%;
-    margin: 1.5%;
-}
 
 #question {
+    margin: 0, auto;
+    min-width: 50%;
     display: flex;
     justify-content: flex-start;
     animation: floatUpDown 1.5s ease-in-out infinite alternate;
+    max-height: 100%;
 }
 
-#adviceCol {
-    flex: 0 0 auto;
-    width: 30%;
-    max-height: 20vh;
+#advice {
+    width: 35%;
+    max-height: 120%;
 }
+
 .text {
-    font-size: 1.5vw;
+    white-space: pre-line;
+    font-size: 1.2cqw;
 }
 
-.text2 {
-    font-size: 1.4vw;
+#weekly-ish {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
+
+.text3 {
+    margin: 0 auto;
+}
+
+#weekly {
+    margin: 0 auto;
+    width: 55%;
+    max-height: 100%;
+}
+
 
 @keyframes floatUpDown {
     0% {
@@ -111,18 +242,6 @@ p {
     100% {
         transform: translateY(-3px);
     }
-}
-
-#periodical {
-    margin: auto;
-    width: 75%;
-    max-width: 45vh;
-    animation: floatUpDown2 1.5s ease-in-out infinite alternate;
-}
-
-#subButton {
-    margin: auto;
-    width: 55%;
 }
 
 @keyframes floatUpDown2 {

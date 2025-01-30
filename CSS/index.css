@@ -1,21 +1,23 @@
+
 .advice {
-    position: absolute;
-    top: 90%;
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     max-width: 120vh;
-    width: 90vw;
 }
 
 .adviceImg {
-    width: 15%;
 
-    max-width: 10%;
-
-    height: 1%;
+    position: absolute;
+    right: 5%;
+    width: 7%;
+    max-width: 15vh;
     z-index: 999;
     animation: floatUpDown2 2s ease-in-out infinite alternate;
+
 }
 
 .container {
@@ -23,29 +25,31 @@
 }
 
 .gif {
-    margin-top: -3%;
+    position: absolute;
+    margin-top: -25%;
     margin-bottom: -3%;
     width: 20%;
 }
 
 .middle-buttons {
-    margin-top: -5%;
+    margin-top: 5%;
+    width: 80%;
+    max-height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    z-index: 991;
 }
 
 .periodical {
     margin-right: 5%;
     width: 30%;
-    max-width: 70vh;
     animation: floatUpDown 1.5s ease-in-out infinite alternate;
 }
 
 .shop {
     margin-left: 5%;
     width: 25%;
-    max-width: 70vh;
 }
 
 @keyframes floatUpDown2 {

@@ -1,0 +1,58 @@
+#testbook {
+    display: none;
+    position: fixed;
+}
+
+#testpage {
+    width: 97%;
+    height: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 32px 32px rgba(0, 0, 0, 0.8);
+}
+
+
+#testcontent {
+    background: transparent url(/Images/gif.gif) no-repeat scroll center center;
+    background-size: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-width: 50%;
+    max-width: fit-content;
+
+}
+
+.book-page {
+    display: none;
+    width: 100%;
+    max-height: 99%;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+.active {
+    display: block;
+}
+.active:hover {
+    cursor:zoom-in;
+}
+
+.navigate {
+    width: 12.5%;
+}
+
+#prevBtn {
+    margin-left: 8%;
+}
+
+#nextBtn {
+    margin-right: 8%;
+}

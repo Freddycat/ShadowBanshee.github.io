@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Google Sans Mono';
+    src: url('/Font/Google-Sans-Mono-master/Google-Sans-Mono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sans';
+    src: url('/Font/UncutSans-Variable.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+input {
+    font-family: 'Sans';
+}
+
+#login-button {
+    position: fixed;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 1%;
+    right: 1%;
+    color: #ffffff;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+#login-sidebar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 1%;
+    right: -120%;
+    height: 30%;
+    min-height: 200px;
+    width: 335px;
+    max-width: 90%;
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow: auto;
+}
+
+#login-sidebar.active {
+    right: 1%;
+}
+
+#logged-in {
+    display: flex;
+    flex-direction: column;
+}
+
+#logged-in button{
+    width: 50%;
+    margin: 1%;
+}
+
+.error-message {
+    font-family: 'Sans';
+    display: none; /* Initially hidden */
+}

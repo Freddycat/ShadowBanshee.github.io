@@ -301,6 +301,6 @@ a:hover {
 
 a {
     color: #000000;
-    font-size: 3cqw;
+    font-size: 1rem;
     transition: all .3s ease-in-out;
 }

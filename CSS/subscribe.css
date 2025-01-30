@@ -1,0 +1,214 @@
+input {
+    border: 1px solid #ccc;
+    /* Mimic Stripe's border style */
+    border-radius: 4px;
+    /* Match Stripe's border radius */
+    padding: 10px;
+    /* Adjust padding to fit */
+    font-size: 16px;
+    /* Match font size */
+    transition: border-color 0.2s;
+    /* Smooth transition effect */
+}
+
+input:focus {
+    border-color: #0070f3;
+    /* Change border color on focus */
+    box-shadow: 0 0 0 2px rgba(141, 151, 255, 0.5);
+    /* Blueish shadow */
+    outline: none;
+    /* Remove default outline */
+}
+
+#checkout {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    left: 10%;
+    top: -150vh;
+    /* Hidden initially off-screen */
+    height: 90%;
+    width: 80%;
+    /* Adjust width as needed */
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    transition: top 0.3s ease;
+    z-index: 1005;
+    overflow-y: scroll;
+}
+
+#checkout.active {
+    top: 5%;
+}
+
+#signup-form {
+    display: none;
+}
+
+#signup-form.active {
+    display: block;
+    margin: 5%;
+}
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close {
+    position: absolute;
+    margin: 1%;
+    padding: 0.5rem 1rem;
+    border-radius: 3vw;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2,
+h3,
+h4 {
+    padding: 0%;
+    margin: 0%;
+}
+
+#subscription-type {
+    text-align: left;
+    margin-bottom: -5%;
+}
+
+#subscription-area {
+    text-align: center;
+    justify-content: space-between;
+    margin: 5%, auto;
+    padding-top: 1%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 120vmin;
+    min-width: 620px;
+    height: 100%;
+}
+
+#subscription-form {
+    white-space: pre-line;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-bottom: -3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#subscription-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.subscription-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3%;
+    width: 90%;
+}
+
+#free-information {
+    width: 45%;
+}
+
+#paid-information {
+    width: 45%;
+}
+
+.information {
+    width: 110%;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+#snail-info {
+    margin-top: -5%;
+}
+
+.selector {
+    position: absolute;
+    width: 10%;
+    margin-left: 7rem;
+    z-index: 5;
+    animation: floatUpDown 0.75s ease-in-out infinite alternate;
+}
+
+.selection-images {
+    width: 100%;
+}
+
+.selection-images:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.border {
+    box-shadow: 0 0 8px 8px rgb(228, 255, 78);
+    border-radius: 2vw;
+}
+
+#input-area {
+    margin-top: -5%;
+}
+
+.checkout-form {
+    margin: 0;
+    height: 90%;
+    margin-bottom: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#loading-indicator {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loading-indicator img {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+#email {
+    margin-top: -5%;
+}
+
+#payment-form {
+    margin: 4%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    overflow: scroll;
+}
+
+#confirm-button {
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+#payment-result {
+    margin: 3%;
+}
+
+input {
+    font-family: monospace;
+}

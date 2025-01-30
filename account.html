@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>account</title>
+
+  <link rel="icon" href="Images/ZineButtons/bansheebutton1.png">
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/home.css">
+  <link rel="stylesheet" href="CSS/account.css">
+  <link rel="stylesheet" href="CSS/loader.css">
+</head>
+
+<body>
+  <div id="loadingScreen">
+    <img src="Images/gif.gif" alt="">
+    <div id="loadingBarContainer">
+      <div id="loadingBar"></div>
+    </div>
+  </div>
+  <div id="pageContent">
+
+
+
+    <div class="modal">
+      <div class="modal-content">
+
+        <div class="header">
+          <button class="home" type="button" onclick="window.location.href='index.html'">
+            <img src="Images/title/Oneeyedsuperkid.png" />
+            <p id="home">home</p>
+          </button>
+        </div>
+
+        <h2>Account</h2>
+        <div id="account-info">
+          <p>Username: <span id="account-username"></span></p>
+          <p>Email: <span id="account-email"></span></p>
+        </div>
+
+        <div id="subscriptions">
+          <h3>Subscriptions</h3>
+          <div id="subscription-list">
+
+            <div id="unsubscribed">
+              <p>You are not subscribed to any newsletters.</p>
+            </div>
+
+            <div id="subscribed-free">
+              <p>Subscription Type: Free Cyber Teir!</p>
+              <h3>Amount: $0/monthly</h3>
+              <p>You can subscribe to the Snail-Mail teir at any time!</p>
+              <p>Or, Unsubscribe:</p>
+              <button class="unsubscribe-button nav-button">Unsubscribe</button>
+            </div>
+
+            <div id="subscribed-paid" style="display: none;">
+              <p>Subscription Type: <span id="subscription-type"></span>!</p>
+              <h3>Amount: $<span id="subscription-amount"></span>/monthly</h3>
+              <p>You can edit or cancel your Stripe subscription at any time!</p>
+              <p>Price changes or cancelations happen next billing cycle,</p>
+              <p>and can always be edited or re-instated.</p>
+              <h3>Edit your subscription:</h3>
+              <button id="edit-button" class="nav-button">Edit Subscription</button>
+              <button class="unsubscribe-button nav-button">Unsubscribe</button>
+            </div>
+
+            <div id="canceled" style="display: none;">
+              <p>Your Paid subscription is canceled but still active until <span id="cancel-date"></span>.</p>
+              <button id="reactivate-button" class="nav-button">Reactivate Subscription</button>
+            </div>
+
+          </div>
+
+          <div id="edit-subscription-container" style="display: none;">
+            <label for="selection-type">Subscription Type:</label>
+            <select id="selection-type">
+              <option value="free">Free</option>
+              <option value="snail-mail">Snail Mail</option>
+            </select>
+            <label for="selection-price">Price:</label>
+            <input type="number" id="selection-amount" min="0" max="10" step="1" value="0">
+            <button id="save-subscription-button" class="nav-button">Save</button>
+          </div>
+
+        </div>
+
+        <h3>↓You can scroll down to logout or delete your account↓</h3>
+
+        <div id="account-buttons">
+          <button id="logout-button" class="nav-button">Log out</button>
+          <button id="delete-account-button" class="nav-button" style="background-color: red;">Delete Account</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="JS/account.js"></script>
+
+  <script src="JS/loading.js"></script>
+
+</body>
+
+</html>

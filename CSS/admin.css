@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Google Sans Mono';
+  src: url('/Font/Google-Sans-Mono-master/Google-Sans-Mono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Sans';
+  src: url('/Font/UncutSans-Variable.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ql-editor {
+  font-family: 'Sans', ;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#send-email-form {
+  margin: auto;
+  width: 90%;
+  margin-bottom: 5%;
+}

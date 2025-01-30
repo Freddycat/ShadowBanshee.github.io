@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Google Sans Mono';
+    src: url('/Font/Google-Sans-Mono-master/Google-Sans-Mono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sans';
+    src: url('/Font/UncutSans-Variable.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 p {
     font-family: "AlterEgo";
     font-size: 12px;
@@ -42,7 +56,7 @@ p {
 }
 
 .text {
-    font-family: "AlterEgo";
+    font-family: "Sans";
     font-size: 12px;
     background-color: rgba(122, 170, 231, 0.671);
     border: 1.5px solid #0084ff9a;

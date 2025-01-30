@@ -18,6 +18,9 @@
 </head>
 
 <body>
+
+    <img src="Images/stripe.svg" alt="" style="width: 12%; position: fixed; z-index: 999;">
+
     <div id="loadingScreen">
         <img src="Images/gif.gif" alt="">
         <div id="loadingBarContainer">
@@ -109,6 +112,37 @@
                 </div>
             </div>
             <div id="shopSpace">
+
+                <div class="item zine" data-price="7" onclick="showItemDetails(this); event.stopPropagation()">
+                    <h3>TSB Periodical issue 2</h3>
+                    <img class="ico" src="Images/store/items/TSBP2cover.png" alt="">
+                    <div class="info">
+                        <p class="X">X</p>
+                        <div class="image-carousel">
+                            <button class="arrow left"
+                                onclick="scrollImages(this, -1); event.stopPropagation()">&#9664;</button>
+                            <div class="image-container">
+                                <img src="Images/store/items/TSBP2listing/TSBP2listing(1).jpg" alt="">
+                                <img src="Images/store/items/TSBP2listing/TSBP2listing(2).jpg" alt="">
+                                <img src="Images/store/items/TSBP2listing/TSBP2listing(2).png" alt="">
+                                <img src="Images/store/items/TSBP2listing/TSBP2listing(3).jpg" alt="">
+                                <img src="Images/store/items/TSBP2listing/TSBP2listing(4).jpg" alt="">
+                            </div>
+                            <button class="arrow right"
+                                onclick="scrollImages(this, 1); event.stopPropagation()">&#9654;</button>
+                        </div>
+                        <div class="desc">
+                            <p>The Shadow Banshee Periodical Issue # 1</p>
+                            <span>The NEW Shadow Banshee Periodical Starring the Banshee,
+                                and other comics from the mind of Oneeyedsuperkid.
+                                Featuring the Shadow Banshee advice column</span>
+                            <p class="price"> $7.00 USD </p>
+                            <button class="add-to-cart" onclick="addToCart('TSB Periodical issue 1', event)">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="item zine" data-price="7" onclick="showItemDetails(this); event.stopPropagation()">
                     <h3>TSB Periodical issue 1</h3>
                     <img class="ico" src="Images/store/items/theShadowBansheePeriodicalIssue1.png" alt="">

@@ -5,74 +5,256 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShadowBanshee</title>
-    
+
     <link rel="icon" href="Images/ZineButtons/bansheebutton1.png">
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/modal.css">
     <link rel="stylesheet" href="CSS/periodical.css">
+    <link rel="stylesheet" href="CSS/book.css">
+    <link rel="stylesheet" href="CSS/alert.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <!--
+    <link rel="stylesheet" href="CSS/create-account.css">
+    -->
+    <link rel="stylesheet" href="CSS/subscribe.css">
     <link rel="stylesheet" href="CSS/loader.css">
 </head>
 
 <body>
 
+    <img src="Images/stripe.svg" alt="" style="width: 12%; position: fixed; z-index: 999;">
+
     <div id="loadingScreen">
         <img src="Images/gif.gif" alt="">
         <div id="loadingBarContainer">
-          <div id="loadingBar"></div>
+            <div id="loadingBar"></div>
         </div>
-      </div>
+    </div>
     <div id="pageContent">
+
+        <div id="alert"></div>
+
         <div class="header">
             <button type="button" class="home" onclick="window.location.href='index.html'">
-              <img src="Images/title/Oneeyedsuperkid.png" />
-              <p class=title>Home of The Shadow Banshee, The Dreamwalker, The Superkid and more... &nbsp &nbsp</p>
+                <img src="Images/title/Oneeyedsuperkid.png" />
+                <p class=title>Home of The Shadow Banshee, The Dreamwalker, The Superkid and more... &nbsp &nbsp</p>
             </button>
-          </div>
+        </div>
+
+        <button id="login-button" class="nav-button">Login</button>
+
+        <div id="login-sidebar">
+
+            <div id="login">
+                <form id="login-form">
+                    <span>Log in:</span>
+                    <br>
+                    <input type="text" id="login-username-email" placeholder="Username or Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit" id="login-submit" class="nav-button">Login</button>
+                </form>
+            </div>
+
+            <div id="sign-up">
+                <span>Don't have an account? Create one!</span>
+                <button id="signup-button" class="nav-button">Sign Up</button>
+            </div>
+
+            <div id="logged-in">
+                <div id="account-info">
+                    <span id="account-username"></span>
+                    <br>
+                    <br>
+                    <span>You are logged in!</span>
+                    <br>
+                    <br>
+                </div>
+                <button id="account-button" class="nav-button" onclick="window.location.href='account.html'"">account</button>
+          <button id="logout-button" class="nav-button">Log out</button>
+            </div>
+
+            <div id="create-account-form" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form id="create-account-form">
+                        <input type="text" id="signup-username" placeholder="Username" required>
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                        <button type="submit" class="nav-button">Create Account</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
         <div class="container">
             <img src="Images/clouds.gif" class="clouds">
         </div>
         <div class="center">
-            <div class="container">
+            <div id="flex-container">
                 <div class="left">
-                    <button id="TSBP1" onclick="window.location.href='TSBP1.html'">
-                        <img id="page" src="Images/TSBP1/page1.png" alt="">
-                        <img id="readMe" src="Images/Periodical/Read me.png" alt="">
+
+                    <button id="periodical" type="button" onclick="scrollToSubscriptionForm()">
+                        <img src="Images/periodical_logo.png" alt="">
+                        <img id=subButton src="Images/Periodical/sub button.png" alt="">
+                        <div class="text2">
+                            <p>Sign up for the Shadow Banshee<br>
+                                Periodical Subscription!</p>
+                        </div>
+                        <img id="arrow" src="Images/Periodical/arrow.png" alt="">
                     </button>
+
                 </div>
                 <div class="right">
                     <div class="top-right">
-                        <button id="question" onclick="window.location.href='questions.html'">
-                            <div id="adviceCol">
-                                <img src="Images/Advice.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p>
-                                    <br>Ask the Banshee questions
-                                    to be answered in the next
-                                    issue of the periodical!
-                                </p>
-                            </div>
-                        </button>
+                        <div id="top-right-left">
+                            <button id="question" onclick="window.location.href='questions.html'">
+                                <img id="advice" src="Images/Advice.png" alt="">
+                                <div class="text">
+                                    <p>Ask the Banshee
+                                        questions!</p>
+                                </div>
+                            </button>
+                        </div>
+                        <div id="top-right-right">
+                            <button id="weekly-ish" onclick="window.location.href='weekly.html'">
+                                <img id="weekly" src="Images/weekly-banshee.png" alt="">
+                                <div class="text">
+                                    <p class="text3">Weekly-ish
+                                        Banshee!</p>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                     <div class="bottom-right">
-                        <button id="periodical" type="button"
-                            onclick="javascript:window.open('https://oneeyedsuperkid.gumroad.com/l/theperiodical', '_blank');">
-                            <img src="Images/periodical_logo.png" alt="">
-                            <img id=subButton src="Images/Periodical/sub button.png" alt="">
-                            <div class="text2">
-                                <p>
-                                    Sign up for the Shadow Banshee<br>
-                                    Periodical Subscription on Gumroad!
-                                </p>
-                            </div>
-                        </button>
+                        <p id="read">Read the Shadow Banshee Periodical!</p>
+                        <div class="bottom-right-container">
+                            <button id="TSBP1" class="card-container">
+                                <img class="card card-left" src="Images/TSBP1/page1.png" alt="">
+                                <img class="readMe card-left" src="Images/Periodical/Read me.png" alt="">
+                            </button>
+                            <button id="TSBP2" class="card-container">
+                                <img class="card card-right" src="Images/TSBP2/page1.png" alt="">
+                                <img class="readMe card-right" src="Images/Periodical/Read me.png" alt="">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="JS/main.js"></script>
-    <script src="JS/loading.js"></script>
-</body>
 
-</html>
+        <div id="testbook" class="modal">
+            <div id="close">X</div>
+            <div id="testpage" class="modal-content">
+                <button id="prevBtn" class="navigate">
+                    <img src="Images/TSBP1/Buttons/back button.png" alt="">
+                </button>
+
+                <div id="testcontent">
+                </div>
+
+                <button id="nextBtn" class="navigate">
+                    <img src="Images/TSBP1/Buttons/next button.png" alt="">
+                </button>
+
+            </div>
+        </div>
+
+        <div id="subscription-area" class="modal-content">
+            <div id="subscription-message"></div>
+            <div id="subscription-form">
+                <h2>Subscribe to the Shadow Banshee Periodical!</h2>
+                <h4>With the Free Cyber Teir, you are subscribed to the Shadow Banshee Email List!
+                    For at least $3, The Interdimensional Delivery subscribes you to our snail-mail list!</h4>
+                <form>
+                    <h3 id="subscription-type">Select a Subscription Type:</h3>
+                    <div id="subscription-box">
+                        <div class="subscription-options">
+                            <div id="free-information">
+                                <img id="selector1" class="selector" src="Images/Periodical/selector.png" alt="">
+                                <img class="selection-images" src="Images/Periodical/subscriptionbuttons/cybertier1.png"
+                                    alt="Free Tier" id="free-tier">
+                                <h3>CYBER TIER</h3>
+                                <p class="information">
+                                    (DIGITAL SUBSCRIPTION)
+                                    YOU GET:
+                                    DIGITAL ACCESS TO ALL PERIODICAL ISSUES
+                                    Digital access to the weekly-ish banshee
+
+                                    (Free or Pay what you can!)
+                                </p>
+                            </div>
+                            <div id="paid-information">
+                                <img id="selector2" class="selector" src="Images/Periodical/selector.png" alt="">
+                                <img class="selection-images"
+                                    src="Images/Periodical/subscriptionbuttons/interdimensionaldelivery2.png"
+                                    alt="Snail Mail" id="snail-mail">
+                                <h3>Interdimensional delivery</h3>
+                                <p id="snail-info" class="information">
+                                    (Snail-mail subscription)
+                                    You get:
+                                    Everything in the cyber tier PLUS:
+                                    Every new issue of TSB periodical in the mail!
+                                    (Quarterly-ish)
+                                    (along with healthy quantities of stickers + occasional mini zines sent at random)
+                                    $3-10 monthly
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="input-area">
+                        <h3>Choose your subscription amount!</h3>
+                        <span id="subscription-description"></span>
+                        <label for="amount">Amount:</label>
+                        $<input type="number" id="amount" min="0" max="10" step="1">
+                    </div>
+                    <button id="register-button" type="submit" class="nav-button">Register</button>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div id="login-prompt" class="modal-content">
+            <!-- This will be shown if the user is not logged in -->
+            <span>Please log in to subscribe!</span>
+        </div>
+
+        <div id="checkout" class="modal overlay">
+            <div id="nav">
+                <button id="close" class="nav-button">X</button>
+            </div>
+            <div class="subscribe-modal-content">
+                <h2>Subscribe to <span id="checkout-description"></span></h2><br>
+                <span>Price: <span id="checkout-amount"></span></span><br>
+
+                <div id="loading-indicator" style="display: none;">
+                    <h2>Initializing Stripe...</h2>
+                    <img src="Images/gif.gif" alt="">
+                </div>
+
+                <div id="payment">
+                    <div id="address-element"></div>
+                    <div id="payment-element"></div>
+                    <div id="payment-result"></div>
+                </div>
+                <div id="error-message"></div>
+
+                <button id="confirm-button" class="nav-button">Subscribe</button>
+
+            </div>
+        </div>
+
+        <script src="JS/loading.js"></script>
+        <script type="module" src="JS/login.js"></script>
+        <script type="module" src="JS/periodical.js"></script>
+        <script type="module" src="JS/book.js"></script>
+        <script src="JS/alert.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+            function scrollToSubscriptionForm() {
+                document.getElementById('subscription-form').scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+</body>

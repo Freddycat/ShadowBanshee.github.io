@@ -1,0 +1,38 @@
+.modal {
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    border: 1px solid #888;
+    border-radius: 1vw;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 3vw;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: aliceblue;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Faded black background for overlay modals */
+}
