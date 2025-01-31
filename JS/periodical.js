@@ -265,7 +265,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (amount === 0) {
             const user = await waitForUser();
             const userDocRef = doc(db, 'users', user.uid);
-            updateDoc(userDocRef, { subscribed: true, subscriptionType: 'free' })
+            updateDoc(userDocRef, { 
+                subscribed: true, 
+                subscriptionType: 'free',
+                donationAmount: 0, })
                 .then(() => {
                     sendSubscribeEmail(user.email, subscriptionType);
                     setAlert('Thanks for subscribing!');
@@ -278,6 +281,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.error('Error updating subscription:', error);
                     setAlert('Error updating subscription.');
                 });
+
+            return;
         }
         // Handle paid subscription
         else if (amount > 0) {

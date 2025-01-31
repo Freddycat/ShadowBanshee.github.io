@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert('Error updating subscription.');
                     return;
                 });
-        } else {
+        } else if (userData.donationAmount > 0) {
             const password = prompt("Are you sure you want to cancel your subscription? (you can reactivate it at any time)\nPlease enter your password to confirm:");
             const credential = EmailAuthProvider.credential(userData.email, password);
             try {
