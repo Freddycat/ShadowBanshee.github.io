@@ -5,6 +5,8 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-storage.js";
 
+Quill.register('modules/imageResize', ImageResize);
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -105,6 +107,8 @@ const quill = new Quill('#editor-container', {
       handlers: {
         'image': function () {
           document.getElementById('image-upload').click();
+
+          modules: ['Resize', 'DisplaySize', 'Toolbar']
         }
       }
     }
