@@ -60,16 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
       checkAdmin(user.uid).then(data => {
         if (!data.isAdmin) {
           alert('Access denied. Admins only.');
-          window.location.href = 'index.html';
+          window.location.href = 'index';
         }
       }).catch((error) => {
         console.error('Error checking admin status:', error);
         alert('Error checking admin status.');
-        window.location.href = 'index.html';
+        window.location.href = 'index';
       });
     } else {
       alert('You must be logged in to access this page.');
-      window.location.href = 'index.html';
+      window.location.href = 'index';
     }
   });
 });

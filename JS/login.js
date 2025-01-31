@@ -8,16 +8,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-function sendWelcomeEmail(email) {
-    fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/sendWelcomeEmail', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-    });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("login-button");
     const loginSidebar = document.getElementById("login-sidebar");
@@ -148,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then((response) => {
                 if (!response.ok) {
-                    throw new Error('Failed to create account');
+                    throw new Error(error.error);
                 }
                 return response.json();
             })

@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             modal.style.display = 'block';
 
             const loginForm = document.getElementById('login-form');
-            const errorMessage = document.getElementById('error-message');
 
 
             loginForm.addEventListener('submit', async (event) => {
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 const identifier = document.getElementById('login-username-email').value;
                 const password = document.getElementById('login-password').value;
-                const errorMessageElement = document.getElementById("error-message");
+                const errorMessage = document.getElementById('error-message');
                 try {
                     let email = identifier;
 
@@ -45,15 +44,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const userCredential = await signInWithEmailAndPassword(auth, email, password);
                     console.log('User signed in:', userCredential.user);
 
-                    await auth.currentUser.reload();
-
                     // Update Firestore status to "verified"
                     const user = auth.currentUser;
                     if (user && user.emailVerified) {
                         const userDocRef = doc(db, 'users', user.uid);
                         await updateDoc(userDocRef, { status: 'verified' });
                         console.log('User status updated to verified in Firestore.');
-                        window.location.href = '/index.html'; // Example: redirect to a dashboard
+                        window.location.href = '/index'; // Example: redirect to a dashboard
 
                     } else {
                         console.warn('User is not verified after applying action code.');

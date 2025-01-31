@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             userDocRef = doc(db, 'users', user.uid);
             loadUserData();
         } else {
-            window.location.href = 'index.html'
+            window.location.href = 'index'
         }
     });
 
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
     logoutButton.addEventListener("click", function () {
         signOut(auth).then(() => {
             console.log('User signed out');
-            window.location.href = 'index.html';
+            window.location.href = 'index';
         }).catch((error) => {
             console.error('Error signing out:', error);
         });
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (response.ok) {
                         console.log('Account deletion process started.');
                         alert('Your account has been deleted! You will be redirected to home page.');
-                        window.location.href = 'index.html'; // Redirect after process starts
+                        window.location.href = 'index'; // Redirect after process starts
                     } else {
                         console.error('Failed to start account deletion process.');
                     }
