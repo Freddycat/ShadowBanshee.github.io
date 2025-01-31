@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // Update Firestore status to "verified"
                     const user = auth.currentUser;
                     if (user && user.emailVerified) {
-                        const userDocRef = doc(db, 'users', user.uid);
+                        const userDocRef = doc(db, 'users', username);
                         await updateDoc(userDocRef, { status: 'verified' });
                         console.log('User status updated to verified in Firestore.');
                         window.location.href = '/index'; // Example: redirect to a dashboard
