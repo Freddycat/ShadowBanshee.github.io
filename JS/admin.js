@@ -108,9 +108,12 @@ const quill = new Quill('#editor-container', {
         'image': function () {
           document.getElementById('image-upload').click();
 
-          modules: ['Resize', 'DisplaySize', 'Toolbar']
         }
       }
+    },
+    imageResize: {
+      // Options for image resize module
+      modules: ['Resize', 'DisplaySize', 'Toolbar']
     }
   }
 });
