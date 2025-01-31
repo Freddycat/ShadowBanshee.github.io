@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const oobCode = urlParams.get('oobCode');
     const mode = urlParams.get('mode');
+    const loading = document.getElementById('loading');
+    loading.style.display = 'none';
 
     if (mode === 'verifyEmail' && oobCode) {
 
@@ -31,7 +33,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const identifier = document.getElementById('login-username-email').value;
                 const password = document.getElementById('login-password').value;
                 const errorMessage = document.getElementById('error-message');
+                loading.style.display = 'block';
+                
                 try {
+                    
                     let email = identifier;
 
                     if (!identifier.includes('@')) {
@@ -65,6 +70,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('Error verifying email:', error);
             alert('Failed to verify email. Please try again.');
         }
+        loading.style.display = 'none';
     } else {
         alert('Invalid verification link.');
     }
