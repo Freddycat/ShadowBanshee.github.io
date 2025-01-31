@@ -61,7 +61,22 @@ input {
     margin: 1%;
 }
 
-.error-message {
+#loading {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -15%;
+}
+
+#error-message {
     font-family: 'Sans';
-    display: none; /* Initially hidden */
+}
+
+#account-area {
+    display: flex;
+    flex-direction: row;
+}
+
+#account-loading {
+    width: 35%;
+    margin-top: -5%;
 }

@@ -19,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModal = document.getElementsByClassName("close")[0];
     const createAccount = document.getElementById("create-account-form");
     const createAccountForm = document.getElementById("create-account-form");
+    const messageElement = document.getElementById("error-message");
+    const loading = document.getElementById("loading");
+    const accountLoading = document.getElementById("account-loading");
     createAccount.style.display = "none";
+    loading.style.display = "none";
+    accountLoading.style.display = "none";
 
     function toggleLogin() {
         loginSidebar.classList.toggle("active");
@@ -68,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const identifier = document.getElementById("login-username-email").value;
         const password = document.getElementById("login-password").value;
-        const errorMessageElement = document.getElementById("error-message");
+        loading.style.display = 'block';
 
         try {
             let email = identifier;
@@ -86,18 +91,20 @@ document.addEventListener("DOMContentLoaded", function () {
             updateUI(userCredential.user);
             setAlert('Signed in!', 'success', 3000);
         } catch (error) {
+
             // Check for specific error messages and handle accordingly
             if (error.code === 'auth/user-not-found') {
-                errorMessageElement.textContent = `User "${identifier}" not found.`;
+                messageElement.textContent = `User "${identifier}" not found.`;
             } else if (error.code === 'auth/wrong-password') {
-                errorMessageElement.textContent = 'Incorrect password. Please try again.';
+                messageElement.textContent = 'Incorrect password. Please try again.';
             } else {
-                errorMessageElement.textContent = error.message; // Default error message
+                messageElement.textContent = error.message; // Default error message
             }
 
-            errorMessageElement.style.display = 'block'; // Show the error message
+            messageElement.style.display = 'block'; // Show the error message
             console.error('Error signing in:', error);
         }
+        loading.style.display = 'none';
     });
 
     async function getEmail(username) {
@@ -123,13 +130,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    createAccountForm.addEventListener("submit", function (event) {
+    createAccountForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         const username = document.getElementById("signup-username").value;
         const email = document.getElementById("signup-email").value;
         const password = document.getElementById("signup-password").value;
 
-        fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/signup', {
+        accountLoading.style.display = 'block';
+
+        await fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -150,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error('Error during signup:', error);
                 alert(`Error during signup: ${error.message}`);
             });
+        accountLoading.style.display = 'none';
     });
 
     logoutButton.addEventListener("click", function () {
