@@ -38,10 +38,10 @@
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
 }
 
-.active {
+.book-page.active {
     display: block;
 }
-.active:hover {
+.book-page.active:hover {
     cursor:zoom-in;
 }
 

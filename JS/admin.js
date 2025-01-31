@@ -14,14 +14,23 @@ const storage = getStorage(app);
 
 // Check if user is admin
 
-function checkAdmin(uid) {
-  return fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/checkAdmin', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ uid }),
-  }).then(response => response.json());
+async function checkAdmin() {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (user) {
+    try {
+      const tokenResult = await user.getIdTokenResult();
+      const isAdmin = tokenResult.claims.admin === true; // Check the claim
+
+      return isAdmin; // Return true or false
+    } catch (error) {
+      console.error("Error getting token:", error);
+      return false; // Handle error, return false
+    }
+  } else {
+    return false; // No user is signed in, return false
+  }
 }
 
 function sendEmailToSubscribed(subject, text) {
@@ -55,18 +64,26 @@ function savePost(subject, text) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  onAuthStateChanged(auth, (user) => {
+  const auth = getAuth(); // Get auth instance here
+
+  onAuthStateChanged(auth, async (user) => {  // Make callback async
     if (user) {
-      checkAdmin(user.uid).then(data => {
-        if (!data.isAdmin) {
+      try {
+        const tokenResult = await user.getIdTokenResult(); // Get token
+        const isAdmin = tokenResult.claims.admin === true; // Check claim
+
+        if (!isAdmin) {
           alert('Access denied. Admins only.');
           window.location.href = 'index';
+        } else {
+          // User is an admin.  Proceed with loading the admin page content.
+          // ... your admin page initialization code here ...
         }
-      }).catch((error) => {
+      } catch (error) {
         console.error('Error checking admin status:', error);
         alert('Error checking admin status.');
         window.location.href = 'index';
-      });
+      }
     } else {
       alert('You must be logged in to access this page.');
       window.location.href = 'index';
@@ -97,19 +114,19 @@ const quill = new Quill('#editor-container', {
 const sendEmailForm = document.getElementById("email");
 if (sendEmailForm) {
   sendEmailForm.addEventListener("click", function (event) {
-      event.preventDefault();
-      const subject = document.getElementById("email-subject").value;
-      const text = quill.root.innerHTML; // Get the content from Quill editor
+    event.preventDefault();
+    const subject = document.getElementById("email-subject").value;
+    const text = quill.root.innerHTML; // Get the content from Quill editor
 
-      console.log('Sending email with subject:', subject);
-      console.log('Email content:', text);
+    console.log('Sending email with subject:', subject);
+    console.log('Email content:', text);
 
-      sendEmailToSubscribed(subject, text).then(() => {
-          alert('Email sent to subscribed users.');
-      }).catch((error) => {
-          console.error('Error sending email:', error);
-          alert('Error sending email.');
-      });
+    sendEmailToSubscribed(subject, text).then(() => {
+      alert('Email sent to subscribed users.');
+    }).catch((error) => {
+      console.error('Error sending email:', error);
+      alert('Error sending email.');
+    });
   });
 }
 
@@ -118,19 +135,19 @@ if (sendEmailForm) {
 const savePostForm = document.getElementById("weekly");
 if (savePostForm) {
   savePostForm.addEventListener("click", function (event) {
-      event.preventDefault();
-      const subject = document.getElementById("email-subject").value;
-      const text = quill.root.innerHTML; // Get the content from Quill editor
+    event.preventDefault();
+    const subject = document.getElementById("email-subject").value;
+    const text = quill.root.innerHTML; // Get the content from Quill editor
 
-      console.log('Saving post with subject:', subject);
-      console.log('Post content:', text);
+    console.log('Saving post with subject:', subject);
+    console.log('Post content:', text);
 
-      savePost(subject, text).then(() => {
-          alert('Saved post to weekly.');
-      }).catch((error) => {
-          console.error('Error saving:', error);
-          alert('Error saving.');
-      });
+    savePost(subject, text).then(() => {
+      alert('Saved post to weekly.');
+    }).catch((error) => {
+      console.error('Error saving:', error);
+      alert('Error saving.');
+    });
   });
 }
 
