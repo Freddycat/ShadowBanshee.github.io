@@ -127,23 +127,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    if (!isSubscribed) {
-        weeklyButton.addEventListener('mouseover', (event) => {  // Hover message
+    weeklyButton.addEventListener('mouseover', (event) => {
+        if (!isSubscribed) {
             showMouseAlert("Subscribe to read for free!", event);
             weeklyButton.style.cursor = 'not-allowed';
-        });
-        weeklyButton.addEventListener('mousemove', (event) => {  // Hover message
+        } else {
+            hideMouseAlert();
+            weeklyButton.style.cursor = 'pointer';
+        }
+    });
+    weeklyButton.addEventListener('mousemove', (event) => {  // Hover message
+        if (!isSubscribed) {
             showMouseAlert("Subscribe to read for free!", event);
             weeklyButton.style.cursor = 'not-allowed';
-        });
-        weeklyButton.addEventListener('mouseout', (event) => {  // Hover message
+        }
+    });
+    weeklyButton.addEventListener('mouseout', (event) => {  // Hover message
             hideMouseAlert(event);
             weeklyButton.style.cursor = 'pointer';
-        });
-    }
-
-
-
+    });
 
     auth.onAuthStateChanged(toggleSubscriptionArea);
 
