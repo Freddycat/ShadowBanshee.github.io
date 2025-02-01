@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="CSS/book.css">
     <link rel="stylesheet" href="CSS/alert.css">
     <link rel="stylesheet" href="CSS/login.css">
-    <!--
     <link rel="stylesheet" href="CSS/create-account.css">
-    -->
     <link rel="stylesheet" href="CSS/subscribe.css">
     <link rel="stylesheet" href="CSS/loader.css">
 </head>
@@ -71,7 +69,7 @@
                     <br>
                 </div>
                 <button id="account-button" class="nav-button" onclick="window.location.href='account'"">account</button>
-          <button id="logout-button" class="nav-button">Log out</button>
+          <button id=" logout-button" class="nav-button">Log out</button>
             </div>
 
             <div id="create-account-form" class="modal">
@@ -165,8 +163,6 @@
             <div id="subscription-message"></div>
             <div id="subscription-form">
                 <h2>Subscribe to the Shadow Banshee Periodical!</h2>
-                <h4>With the Free Cyber Teir, you are subscribed to the Shadow Banshee Email List!
-                    For at least $3, The Interdimensional Delivery subscribes you to our snail-mail list!</h4>
                 <form>
                     <h3 id="subscription-type">Select a Subscription Type:</h3>
                     <div id="subscription-box">
@@ -229,17 +225,17 @@
                 <h2>Subscribe to <span id="checkout-description"></span></h2><br>
                 <span>Price: <span id="checkout-amount"></span></span><br>
 
-                <div id="loading-indicator" style="display: none;">
-                    <h2>Initializing Stripe...</h2>
-                    <img src="Images/gif.gif" alt="">
-                </div>
-
                 <div id="payment">
                     <div id="address-element"></div>
                     <div id="payment-element"></div>
                     <div id="payment-result"></div>
                 </div>
                 <div id="error-message"></div>
+
+                <div id="loading-indicator" style="display: none;">
+                    <h2>Initializing Stripe...</h2>
+                    <img src="Images/gif.gif" alt="">
+                </div>
 
                 <button id="confirm-button" class="nav-button">Subscribe</button>
 
