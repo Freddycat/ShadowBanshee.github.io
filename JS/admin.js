@@ -4,8 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/fireba
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-storage.js";
-import Quill from 'https://cdn.quilljs.com/1.3.6/quill.js';
-import { ImageResize } from 'https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js';
+
 Quill.register('modules/imageResize', ImageResize);
 
 // Initialize Firebase
