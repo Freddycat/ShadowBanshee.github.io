@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const registerButton = document.getElementById("register-button");
 
     const checkoutModal = document.getElementById("checkout");
-    const closeModal = document.getElementsByClassName("close");
+    const closeCheckout = document.getElementById("close-checkout");
     const confirmButton = document.getElementById("confirm-button");
 
     const loadingIndicator = document.getElementById('loading-indicator');
@@ -22,11 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const amountInput = document.getElementById('amount');
 
     const subscriptionDescription = document.getElementById('subscription-description');
+    const input = document.getElementById('input-area');
     const checkoutDescription = document.getElementById('checkout-description');
     const checkoutAmount = document.getElementById('checkout-amount');
     const payment = document.getElementById('payment');
 
     const weeklyButton = document.getElementById('weekly-ish');
+
+    const alertDiv = document.getElementById('mouse-alert');
 
     let stripe, elements, paymentElement, clientSecret, addressElement;
     let addressData = null;
@@ -36,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let submitted = false;
     let isSubscribed = false;
     let isSnailMail = false;
-    let selectedSubscription = 'snail-mail';
-    let amount = 300;
+    let selectedSubscription = null;
+    let amount = 0;
 
     // Function to check if the user is logged in
     function isLoggedIn() {
@@ -46,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const user = auth.currentUser;
     fetchSubscriptionStatus();
+    toggleSubscriptionArea();
 
     async function waitForUser() {
         return new Promise((resolve) => {
@@ -123,15 +127,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Run the toggle function on page load
-    document.addEventListener('DOMContentLoaded', toggleSubscriptionArea);
+    if (!isSubscribed) {
+        weeklyButton.addEventListener('mouseover', (event) => {  // Hover message
+            showMouseAlert("Subscribe to read for free!", event);
+            weeklyButton.style.cursor = 'not-allowed';
+        });
+        weeklyButton.addEventListener('mousemove', (event) => {  // Hover message
+            showMouseAlert("Subscribe to read for free!", event);
+            weeklyButton.style.cursor = 'not-allowed';
+        });
+        weeklyButton.addEventListener('mouseout', (event) => {  // Hover message
+            hideMouseAlert(event);
+            weeklyButton.style.cursor = 'pointer';
+        });
+    }
+
+
+
+
     auth.onAuthStateChanged(toggleSubscriptionArea);
 
     // Set default subscription to Snail Mail
-    amountInput.value = 3;
+    amountInput.value = 0;
+    input.style.display = 'none';
     subscriptionDescription.innerText = "Snail Mail tier selected!\nPlease input at least $3 for snail mail. :)";
-    freeTier.classList.remove('border')
-    snailMail.classList.add('border')
+    freeTier.classList.remove('border');
+    snailMail.classList.remove('border');
 
     // Update the amount variable when the input changes
     amountInput.addEventListener('input', function () {
@@ -163,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selector2 = document.getElementById('selector2');
 
     selector1.style.display = 'none';
-    selector2.style.display = 'inline-block';
+    selector2.style.display = 'none';
 
     // Set amount based on subscription type
     freeTier.addEventListener("click", function () {
@@ -171,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         snailMail.src = "Images/Periodical/subscriptionbuttons/interdimensionaldelivery1.png";
         selector2.style.display = 'none';
         selector1.style.display = 'inline-block';
+        input.style.display = 'block';
         freeTier.classList.add('border');
         snailMail.classList.remove('border')
         amountInput.value = 0;
@@ -184,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
         snailMail.src = "Images/Periodical/subscriptionbuttons/interdimensionaldelivery2.png";
         selector1.style.display = 'none';
         selector2.style.display = 'inline-block';
+        input.style.display = 'block';
         snailMail.classList.add('border');
         freeTier.classList.remove('border')
         amountInput.value = 3;
@@ -233,11 +256,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    document.getElementById("close").addEventListener("click", function () {
+    closeCheckout.addEventListener("click", function () {
         checkoutModal.classList.remove("active");
         if (paymentElement) {
             addressElement.unmount();
             paymentElement.unmount();
+
+        } else {
+            console.error("closeCheckout or checkoutModal element not found!");
         }
     });
 
@@ -265,10 +291,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (amount === 0) {
             const user = await waitForUser();
             const userDocRef = doc(db, 'users', user.uid);
-            updateDoc(userDocRef, { 
-                subscribed: true, 
+            updateDoc(userDocRef, {
+                subscribed: true,
                 subscriptionType: 'free',
-                donationAmount: 0, })
+                donationAmount: 0,
+            })
                 .then(() => {
                     sendSubscribeEmail(user.email, subscriptionType);
                     setAlert('Thanks for subscribing!');
@@ -488,8 +515,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const TSBP1 = document.querySelectorAll('.card-left');
     const TSBP2 = document.querySelectorAll('.card-right');
-    const book = document.getElementById('testbook');
-    const content = document.getElementById('testcontent');
+    const book = document.getElementById('book-modal');
+    const content = document.getElementById('page-content');
     const close = document.getElementById('close');
 
     const book1 = [
@@ -525,14 +552,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    //    TSBP2.forEach(b => {
-    //        b.addEventListener('click', () => {
-    //            console.log('open book 2');
-    //            openBook(book2);
-    //        });
-    //    });
-
     TSBP2.forEach(b => {
+        console.log("Element found:", b);
         b.addEventListener('click', () => {
             if (isSubscribed) { // Check subscription status before opening book 2
                 console.log('open book 2');
@@ -540,19 +561,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        b.addEventListener('mouseover', () => {  // Hover message
+        b.addEventListener('mouseover', (event) => {  // Hover message
             if (!isSubscribed) {
-                b.title = "Subscribe to read for free!\nOr read the first one. :)"; // Simple tooltip
+                if (!alertDiv) {
+                    console.error("alertDiv element not found!"); // Check for null!
+                }
+                showMouseAlert("Subscribe to read for free!\nOr read the first one. :)", event);
                 b.style.cursor = 'not-allowed';
+
             } else {
-                b.title = ""; // Clear tooltip if subscribed
+                hideMouseAlert();
                 b.style.cursor = 'pointer';
             }
         });
 
-        b.addEventListener('mouseout', () => {
-            b.title = "";
+        b.addEventListener('mousemove', (event) => {
+            if (!isSubscribed) {
+                showMouseAlert("Subscribe to read for free!\nOr read the first one. :)", event);
+            }
+        });
+
+        b.addEventListener('mouseout', (event) => {
+
+            hideMouseAlert();
             b.style.cursor = 'pointer';
+
         })
 
     });
@@ -576,6 +609,20 @@ document.addEventListener("DOMContentLoaded", function () {
         book.style.display = 'none';
         currentPage = 1;
         isZoomed = false;
+    }
+
+
+    function showMouseAlert(message, event) {
+        alertDiv.innerText = message;
+        alertDiv.style.left = event.pageX + 'px';
+        alertDiv.style.top = event.pageY + 'px';
+        alertDiv.style.display = 'block';
+        console.log('listening');
+    }
+
+    function hideMouseAlert() {
+        const alertDiv = document.getElementById('mouse-alert');
+        alertDiv.style.display = 'none';
     }
 
 

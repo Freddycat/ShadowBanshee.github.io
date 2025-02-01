@@ -32,6 +32,7 @@
     <div id="pageContent">
 
         <div id="alert"></div>
+        <div id="mouse-alert"></div>
 
         <div class="header">
             <button type="button" class="home" onclick="window.location.href='index'">
@@ -78,7 +79,7 @@
 
             <div id="create-account-form" class="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span id="close" class="close nav-button">&times;</span>
                     <form id="create-account-form">
                         <input type="text" id="signup-username" placeholder="Username" required>
                         <input type="email" id="signup-email" placeholder="Email" required>
@@ -147,14 +148,14 @@
             </div>
         </div>
 
-        <div id="testbook" class="modal">
-            <div id="close">X</div>
-            <div id="testpage" class="modal-content">
+        <div id="book-modal" class="modal">
+            <div id="close-book" class="close nav-button">X</div>
+            <div id="page" class="modal-content">
                 <button id="prevBtn" class="navigate">
                     <img src="Images/TSBP1/Buttons/back button.png" alt="">
                 </button>
 
-                <div id="testcontent">
+                <div id="page-content">
                 </div>
 
                 <button id="nextBtn" class="navigate">
@@ -189,7 +190,7 @@
                             <div id="paid-information">
                                 <img id="selector2" class="selector" src="Images/Periodical/selector.png" alt="">
                                 <img class="selection-images"
-                                    src="Images/Periodical/subscriptionbuttons/interdimensionaldelivery2.png"
+                                    src="Images/Periodical/subscriptionbuttons/interdimensionaldelivery1.png"
                                     alt="Snail Mail" id="snail-mail">
                                 <h3>Interdimensional delivery</h3>
                                 <p id="snail-info" class="information">
@@ -209,8 +210,8 @@
                         <span id="subscription-description"></span>
                         <label for="amount">Amount:</label>
                         $<input type="number" id="amount" min="0" max="10" step="1">
+                        <button id="register-button" type="submit" class="nav-button">Register</button>
                     </div>
-                    <button id="register-button" type="submit" class="nav-button">Register</button>
                 </form>
 
 
@@ -224,7 +225,7 @@
 
         <div id="checkout" class="modal overlay">
             <div id="nav">
-                <button id="close" class="nav-button">X</button>
+                <button class="close nav-button" id="close-checkout">X</button>
             </div>
             <div class="subscribe-modal-content">
                 <h2>Subscribe to <span id="checkout-description"></span></h2><br>

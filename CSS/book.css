@@ -1,9 +1,9 @@
-#testbook {
+#book-modal {
     display: none;
     position: fixed;
 }
 
-#testpage {
+#page {
     width: 97%;
     height: 97%;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 
-#testcontent {
+#page-content {
     background: transparent url(/Images/gif.gif) no-repeat scroll center center;
     background-size: 30%;
     display: flex;

@@ -234,6 +234,17 @@ button {
     max-height: 100%;
 }
 
+#mouse-alert {
+    display: none;
+    position: absolute;
+    display: none;
+    transform: translate(5%, -5%);
+    background-color: yellow;
+    padding: 5px;
+    border: 1px solid black;
+    z-index: 999;
+}
+
 
 @keyframes floatUpDown {
     0% {

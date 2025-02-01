@@ -44,6 +44,25 @@ body {
     display: inline;
 }
 
+.nav-button {
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: rgba(0, 102, 255, 0.308);
+    color: white;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: aliceblue;
+    border-width: 2px;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgb(67, 67, 214);
+    cursor: pointer;
+}
+
 .home {
     position: relative;
     display: flex;
@@ -107,25 +126,6 @@ button img:hover {
     height: auto;
     width: 100vw;
     z-index: -999;
-}
-
-.nav-button {
-    text-align: center;
-    margin: auto;
-    text-decoration: none;
-    padding: 10px 10px;
-    background-color: rgba(0, 0, 255, 0.308);
-    color: white;
-    border-style: ridge;
-    border-radius: 5px;
-    border-color: aliceblue;
-    border-width: 2px;
-    transition: all 0.3s;
-}
-
-.nav-button:hover {
-    background-color: rgb(67, 67, 214);
-    cursor: pointer;
 }
 
 .text {
