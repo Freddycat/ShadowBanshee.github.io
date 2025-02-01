@@ -5,14 +5,11 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-storage.js";
 
-Quill.register('modules/imageResize', ImageResize);
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
 const storage = getStorage(app);
-
 
 // Check if user is admin
 
@@ -66,6 +63,7 @@ function savePost(subject, text) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
   const auth = getAuth(); // Get auth instance here
 
   onAuthStateChanged(auth, async (user) => {  // Make callback async
@@ -107,13 +105,8 @@ const quill = new Quill('#editor-container', {
       handlers: {
         'image': function () {
           document.getElementById('image-upload').click();
-
         }
       }
-    },
-    imageResize: {
-      // Options for image resize module
-      modules: ['Resize', 'DisplaySize', 'Toolbar']
     }
   }
 });
@@ -123,7 +116,17 @@ if (sendEmailForm) {
   sendEmailForm.addEventListener("click", function (event) {
     event.preventDefault();
     const subject = document.getElementById("email-subject").value;
-    const text = quill.root.innerHTML; // Get the content from Quill editor
+    let text = quill.root.innerHTML; // Get the content from Quill editor
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const images = doc.querySelectorAll('img');
+
+    images.forEach(img => {
+      img.style.maxWidth = '65%'; // Set style directly on the element
+    });
+
+    text = doc.body.innerHTML;
 
     console.log('Sending email with subject:', subject);
     console.log('Email content:', text);
