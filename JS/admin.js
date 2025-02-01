@@ -142,12 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const userData = docSnap.data();
 
         const userDiv = document.createElement('div');
-        userDiv.classList.add('user'); // Add a CSS class for styling (optional)          
+        userDiv.classList.add('user'); // Add a CSS class for styling (optional)    
 
-        const userContent = document.createElement('p');
-        userContent.innerHTML = userData.username;
-        userDiv.appendChild(userContent);
-        userContainer.appendChild(userDiv);
+        const userHeader = document.createElement('div'); // Use a header for the name
+        userHeader.textContent = userData.username;  // Set username in the header
+        userDiv.appendChild(userHeader);
+
+        const userContent = document.createElement('div');
+        userContent.classList.add('user-content');
 
         // Display the content (iterate through the data)
         for (const key in userData) { // Iterate through the properties of userData
@@ -161,10 +163,23 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
               contentElement.textContent = `${key}: ${userData[key]}`;
             }
-
-            userDiv.appendChild(contentElement);
+            userContent.appendChild(contentElement);
           }
         }
+        userDiv.appendChild(userContent); // Add content to user div
+        userContainer.appendChild(userDiv);
+        userHeader.addEventListener('click', () => {
+          // Close any other open dropdowns:
+          const allUsers = userContainer.querySelectorAll('.user');
+          allUsers.forEach(otherUser => {
+            if (otherUser !== userDiv && otherUser.classList.contains('active')) {
+              otherUser.classList.remove('active');
+            }
+          });
+      
+          // Toggle the clicked dropdown:
+          userDiv.classList.toggle('active');
+        });
 
       } else {
         console.error("No user!");

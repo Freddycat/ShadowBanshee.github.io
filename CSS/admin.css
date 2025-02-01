@@ -45,24 +45,52 @@
   font-family: 'Sans';
   display: flex;
   flex-direction: row;
+  padding: 5%;
 }
 
 #posts {
-  margin: auto;
+  margin: 0;
   display: flex;
-  flex-direction: column;
   width: 50%;
+  flex-direction: column;
 }
 
-#posts div{
+#posts div {
+  background-color: aliceblue;
   border: solid 1px black;
+  border-radius: 3vw;
 }
 
-#posts img{
-  width: 30%;
+#posts img {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  margin-left: 15%;
 }
 
-.post p{
+.post p {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  margin-right: 5%;
+}
+
+#users {
+  padding: 5%;
+}
+
+.user {
+  padding: 5%;
+  margin: 5%;
+  background-color: aliceblue;
+  border: solid 1px black;
+  border-radius: 3vw;
+  width: 100%;
+}
+
+.user-content {
+  display: none;
+}
+
+.active .user-content {
+  display: block;
 }
