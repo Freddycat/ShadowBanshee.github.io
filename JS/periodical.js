@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     weeklyButton.addEventListener('mouseout', (event) => {  // Hover message
-            hideMouseAlert(event);
-            weeklyButton.style.cursor = 'pointer';
+        hideMouseAlert(event);
+        weeklyButton.style.cursor = 'pointer';
     });
 
     auth.onAuthStateChanged(toggleSubscriptionArea);
@@ -198,8 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
         freeTier.classList.add('border');
         snailMail.classList.remove('border')
         amountInput.value = 0;
-        document.getElementById("subscription-description").innerText = 
-        "Free subscription tier!\nFree or choose an amount!\n";
+        document.getElementById("subscription-description").innerText =
+            "Free subscription tier!\nFree or choose an amount!\n";
         selectedSubscription = 'free';
         amount = 0;
         amountCheck();
@@ -506,6 +506,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function sendSubscribeEmail(email, subscriptionType) {
         fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/sendSubscribeEmail', {
+            //fetch('http://127.0.0.1:5001/shadowbanshee-79c70/us-central1/api/sendSubscribeEmail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

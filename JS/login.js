@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function getEmail(username) {
         try {
             const response = await fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/get-email', {
+            //const response = await fetch('http://127.0.0.1:5001/shadowbanshee-79c70/us-central1/api/get-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
