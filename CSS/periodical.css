@@ -175,11 +175,6 @@ button {
     z-index: 3;
 }
 
-#page {
-    width: 25vw;
-    max-height: 60vh;
-}
-
 .card:hover+.readMe {
     transform: translateY(-4%);
     transform: scale(0.9);

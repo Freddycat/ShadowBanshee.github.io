@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const TSBP2 = document.querySelectorAll('.card-right');
     const book = document.getElementById('book-modal');
     const content = document.getElementById('page-content');
-    const close = document.getElementById('close');
+    const close = document.getElementById('close-book');
 
     const book1 = [
         '/Images/TSBP1/page1.png',
