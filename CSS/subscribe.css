@@ -25,22 +25,15 @@ input:focus {
     display: flex;
     flex-direction: column;
     margin: auto;
-    left: 10%;
     top: -150vh;
-    /* Hidden initially off-screen */
-    height: 90%;
-    width: 80%;
-    /* Adjust width as needed */
-    background-color: #ffffff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-    border-radius: 1vw;
     transition: top 0.3s ease;
     z-index: 1005;
     overflow-y: scroll;
+    white-space: pre-line;
 }
 
 #checkout.active {
-    top: 5%;
+    top: 0%;
 }
 
 #signup-form {
@@ -50,21 +43,6 @@ input:focus {
 #signup-form.active {
     display: block;
     margin: 5%;
-}
-
-#nav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#close {
-    position: absolute;
-    margin: 1%;
-    padding: 0.5rem 1rem;
-    border-radius: 3vw;
-    cursor: pointer;
-    text-align: center;
-    font-size: 1.5rem;
 }
 
 h2,
@@ -159,6 +137,14 @@ h4 {
 
 #input-area {
     margin-top: -5%;
+}
+
+.description {
+    display: none;
+}
+
+.description.active {
+    display: block;
 }
 
 .checkout-form {

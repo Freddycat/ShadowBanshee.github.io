@@ -1,9 +1,11 @@
 .modal {
+    position: fixed;
     z-index: 1002;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
     overflow: auto;
     justify-content: center;
     align-items: center;
@@ -14,25 +16,79 @@
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #fefefe;
     margin: auto;
+    padding: 3%;
     border: 1px solid #888;
     border-radius: 1vw;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height: 80%;
+    overflow: auto;
 }
 
-#close {
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 991;
+    margin-top: 3%;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.nav-button {
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: rgba(0, 102, 255, 0.308);
+    color: white;
+    border-style: ridge;
+    border-radius: 5px;
+    border-color: aliceblue;
+    border-width: 2px;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgb(67, 67, 214);
+    cursor: pointer;
+}
+
+.close-nav {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    display: flex;
+    margin: auto;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.close {
+    position: relative;
     padding: 0.5rem 1rem;
     border-radius: 3vw;
     cursor: pointer;
     text-align: center;
     font-size: 1.5rem;
     background-color: aliceblue;
+    border-style: ridge;
+    border-color: aliceblue;
+    border-width: 2px;
+    transition: all 0.3s;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4); /* Faded black background for overlay modals */
+    background-color: rgba(0, 0, 0, 0.4);
 }

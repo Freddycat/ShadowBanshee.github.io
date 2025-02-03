@@ -198,7 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
         freeTier.classList.add('border');
         snailMail.classList.remove('border')
         amountInput.value = 0;
-        document.getElementById("subscription-description").innerText = "Free subscription tier!\nFree or choose an amount!";
+        document.getElementById("subscription-description").innerText = 
+        "Free subscription tier!\nFree or choose an amount!\n";
         selectedSubscription = 'free';
         amount = 0;
         amountCheck();
@@ -236,6 +237,18 @@ document.addEventListener("DOMContentLoaded", function () {
         checkoutDescription.innerText = subscriptionDescription.innerText;
         checkoutAmount.innerText = `$${amountInput.value}`;
         checkoutModal.classList.add("active");
+
+        if (selectedSubscription === 'free') {
+            payment.style.display = 'none';
+            document.getElementById('snail-description').classList.remove('active')
+            document.getElementById('free-description').classList.add('active')
+        }
+
+        if (selectedSubscription === 'snail-mail') {
+            payment.style.display = 'block';
+            document.getElementById('free-description').classList.remove('active')
+            document.getElementById('snail-description').classList.add('active')
+        }
 
         if (amount !== 0) {
             loadingIndicator.style.display = 'block';
@@ -316,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Handle paid subscription
         else if (amount > 0) {
             try {
-                payment.style.display = 'hidden';
+                payment.style.display = 'none';
                 resultDisplay.innerText = '';
                 loadingIndicator.style.display = 'block';
                 // Confirm the payment method setup

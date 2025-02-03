@@ -77,9 +77,11 @@
 
             </div>
 
-            <div id="create-account-form" class="modal">
-                <div class="modal-content">
-                    <span id="close" class="close nav-button">&times;</span>
+            <div id="create-account" class="modal">
+                <div id="create-account-modal" class="modal-content">
+                    <div class="close-nav">
+                        <span id="close" class="close">&times;</span>
+                    </div>
                     <form id="create-account-form">
                         <input type="text" id="signup-username" placeholder="Username" required>
                         <input type="email" id="signup-email" placeholder="Email" required>
@@ -224,12 +226,23 @@
         </div>
 
         <div id="checkout" class="modal overlay">
-            <div id="nav">
-                <button class="close nav-button" id="close-checkout">X</button>
-            </div>
-            <div class="subscribe-modal-content">
-                <h2>Subscribe to <span id="checkout-description"></span></h2><br>
-                <span>Price: <span id="checkout-amount"></span></span><br>
+            <div class="modal-content">
+                <div class="close-nav">
+                    <span id="close-checkout" class="close">X</span>
+                </div>
+                <h2>Subscribing to </h2>
+                <span id="checkout-description"></span><br>
+                <span>Price: <span id="checkout-amount"></span></span>
+
+                <span id="free-description" class="description">
+                    With the Free Cyber Tier Subscription, you get updates from the Shadow Banshee to your Email Address! 
+                    Plus, access to the quarterly-ish periodical, and the weekly-ish banshee archives!
+                </span>
+                <span id="snail-description" class="description">
+                    With the Snail-Mail subscription, you get the Shadow Banshee Periodical mailed to your door!
+                    weekly-ish updates from the Shadow Banshee to your Email Address! 
+                    Plus, digital access to the periodical, and the weekly-ish banshee archives!
+                </span>
 
                 <div id="payment">
                     <div id="address-element"></div>

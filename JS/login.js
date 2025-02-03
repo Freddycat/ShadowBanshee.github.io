@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoutButton = document.getElementById("logout-button");
     const signupButton = document.getElementById("sign-up");
     const closeModal = document.getElementsByClassName("close")[0];
-    const createAccount = document.getElementById("create-account-form");
+    const createAccount = document.getElementById("create-account");
     const createAccountForm = document.getElementById("create-account-form");
     const messageElement = document.getElementById("error-message");
     const loading = document.getElementById("loading");
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     signupButton.addEventListener("click", function () {
-        createAccount.style.display = "block";
+        createAccount.style.display = "flex";
     });
 
     closeModal.addEventListener("click", function () {
