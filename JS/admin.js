@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
           [{ 'header': [1, 2, false] }],
           [{ 'font': [] }], // Adds a font dropdown
           ['bold', 'italic', 'underline'],
-          ['image','code-block']
+          ['image', 'code-block']
         ],
         handlers: {
           'image': function () {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       uploadBytes(storageReference, file).then(() => {
         getDownloadURL(storageReference).then((url) => {
           const range = quill.getSelection();
-          quill.insertEmbed(range.index, 'image', encodeURI(url));
+          quill.insertEmbed(range.index, 'image', url);
         });
       });
     }
@@ -237,20 +237,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-function sendEmailToAdmins(subject, text) {
-  return fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/send-to-admins', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ subject, text }),
-  }).then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json(); // Parse the response as JSON
-  });
-}
+  function sendEmailToAdmins(subject, text) {
+    return fetch('https://us-central1-shadowbanshee-79c70.cloudfunctions.net/api/send-to-admins', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ subject, text }),
+    }).then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // Parse the response as JSON
+    });
+  }
 
   const sendEmailForm = document.getElementById("email");
   if (sendEmailForm) {
@@ -295,16 +295,18 @@ function sendEmailToAdmins(subject, text) {
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/html');
       const images = doc.querySelectorAll('img');
-
+      
       images.forEach(img => {
+/* 
         const originalSrc = img.getAttribute('src');
         const decodedSrc = decodeURIComponent(originalSrc);
         const encodedSrc = encodeURI(decodedSrc);
         img.setAttribute('src', encodedSrc);
+         */
         img.style.maxWidth = '65%'; // Set style directly on the element
       });
 
-      text = doc.body.innerHTML;
+      //text = doc.body.innerHTML;
 
       console.log('Sending email to admins with subject:', subject);
       console.log('Email content:', text);
