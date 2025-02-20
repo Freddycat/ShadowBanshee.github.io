@@ -264,10 +264,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const images = doc.querySelectorAll('img');
 
       images.forEach(img => {
+/* 
         const originalSrc = img.getAttribute('src');
         const decodedSrc = decodeURIComponent(originalSrc);
         const encodedSrc = encodeURI(decodedSrc);
         img.setAttribute('src', encodedSrc);
+         */
         img.style.maxWidth = '65%'; // Set style directly on the element
       });
 
@@ -295,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/html');
       const images = doc.querySelectorAll('img');
-      
+
       images.forEach(img => {
 /* 
         const originalSrc = img.getAttribute('src');
