@@ -41,6 +41,13 @@
   margin-bottom: 5%;
 }
 
+#email-buttons {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 30%;
+}
+
 #bottom {
   font-family: 'Sans';
   display: flex;
