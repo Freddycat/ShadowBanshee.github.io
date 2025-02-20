@@ -285,7 +285,7 @@ function sendEmailToAdmins(subject, text) {
     });
   }
 
-  const sendToAdminsButton = document.getElementById("send-to-admins");
+  const sendToAdminsButton = document.getElementById("admins");
   if (sendToAdminsButton) {
     sendToAdminsButton.addEventListener("click", function (event) {
       event.preventDefault();
