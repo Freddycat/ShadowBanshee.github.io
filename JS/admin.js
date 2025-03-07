@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const encodedSrc = encodeURI(decodedSrc);
         img.setAttribute('src', encodedSrc);
          */
-        img.style.maxWidth = '65%'; // Set style directly on the element
+        img.style.maxWidth = '65%';
       });
 
       text = doc.body.innerHTML;
