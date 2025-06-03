@@ -1,0 +1,79 @@
+[
+  {
+    "id": "TSBP3",
+    "title": "Shadow Banshee Periodical #3",
+    "price": 7,
+    "description": "The Shadow Banshee Periodical issue #3: to DO or NOT to do \nContains: \nThe Banshee: A dream is but a shadow \nPages 2-3\nThe Oneeyedsuperkid: Things To Do\nPages 4-8\nThe Shadow Banshee advice column \nPages 8-10",
+    "type": "zine"
+  },
+  {
+    "id": "TSBP2",
+    "title": "Shadow Banshee Periodical #2",
+    "price": 7,
+    "description": "The Shadow Banshee Periodical Starring the Banshee, and other comics from the mind of Oneeyedsuperkid. Featuring the Shadow Banshee advice column",
+    "type": "zine"
+  },
+  {
+    "id": "TSBP1",
+    "title": "Shadow Banshee Periodical #1",
+    "price": 7,
+    "description": "The original Shadow Banshee Periodical Starring the Banshee, and other comics from the mind of Oneeyedsuperkid. Featuring the Shadow Banshee advice column",
+    "type": "zine"
+  },
+  {
+    "id": "wobbly",
+    "title": "Wobbly in the Endlessness",
+    "price": 5,
+    "description": "The Banshee explores its thoughts while floating in space <3 \n\n 4 by 5 ½\" 8 page folded printed zine ",
+    "type": "zine"
+  },
+  {
+    "id": "wilderness",
+    "title": "Quietely in the Wilderness",
+    "price": 5,
+    "description": "The Shadow Banshee's sporadic activities during night time hours \n\n 4 by 5 ½\" 8 page folded printed zine",
+    "type": "zine"
+  },
+  {
+    "id": "continuously",
+    "title": "Continuously existing in inner thought",
+    "price": 5,
+    "description": "The Banshee faces it's inner thoughts \n\n 4 by 5 ½\" 8 page folded printed zine",
+    "type": "zine"
+  },
+  {
+    "id": "headfull",
+    "title": "Head full of Clouds",
+    "price": 5,
+    "description": "A day in the life of the Shadow Banshee \n\n 4 by 5 ½\" 8 page folded printed zine ",
+    "type": "zine"
+  },
+  {
+    "id": "puddles",
+    "title": "Puddles of Thought",
+    "price": 5,
+    "description": "The Banshee ponders ways in which to embrace a perfectly good rainy day \n\n 4 by 5 ½\" 8 page folded printed zine ",
+    "type": "zine"
+  },
+  {
+    "id": "beware",
+    "title": "Beware of Banshee sticker",
+    "price": 3,
+    "description": "Beware of Banshee stickers to notify innocent bypassers of Shadow Banshee in the area ⚠️ Printed on glossy label paper, water resistant not waterproof semi permanent \n\n 5 stickers",
+    "type": "sticker"
+  },
+  {
+    "id": "crossing",
+    "title": "Shadow Banshee Crossing sticker",
+    "price": 3,
+    "description": "Help these beautiful creatures safely navigate roadways and street crossings. \n\n 5 Stickers ",
+    "type": "sticker"
+  },
+  {
+    "id": "spread",
+    "title": "Spread Stickers pack",
+    "price": 5,
+    "description": "20 random spread banshee stickers, for semi permanent indoor or outdoor distributing",
+    "type": "sticker"
+  }
+]

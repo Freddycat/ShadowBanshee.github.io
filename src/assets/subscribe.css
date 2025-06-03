@@ -1,0 +1,198 @@
+.modal-content {
+  background-color: rgba(4, 0, 54, 0.2);
+  border-radius: 1vw;
+}
+
+.login-prompt {
+  max-width: 60vw;
+  padding: 0.8vw;
+  margin: 0.8vw;
+  margin-bottom: 5vw;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #0070f3;
+  /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(141, 151, 255, 0.5);
+  /* Blueish shadow */
+  outline: none;
+  /* Remove default outline */
+}
+
+#checkout {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto;
+  z-index: 1005;
+  overflow-y: scroll;
+  white-space: pre-line;
+}
+
+#signup-form {
+  display: none;
+}
+
+#signup-form.active {
+  display: block;
+  margin: 5%;
+}
+
+h2,
+h3,
+h4 {
+  padding: 0%;
+  margin: 0%;
+}
+
+#subscription-type {
+  text-align: left;
+  margin: 1vw;
+}
+
+#subscription-area {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 120vmin;
+  min-width: 620px;
+  height: 100%;
+}
+
+#subscription-form {
+  margin: 3vw;
+  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#subscription-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.subscription-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3vw;
+  gap: 3%;
+  width: 90%;
+}
+
+#free-information {
+  padding: 1vw;
+
+  width: 45%;
+  height: max-content;
+}
+
+#paid-information {
+  padding: 1vw;
+
+  width: 45%;
+}
+
+.information {
+  width: 110%;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+#snail-info {
+  margin-bottom: -1vw;
+}
+
+.selector {
+  position: absolute;
+  width: 10%;
+  margin-left: 7rem;
+  z-index: 5;
+  animation: floatUpDown 0.75s ease-in-out infinite alternate;
+}
+
+.border {
+  box-shadow: 0 0 8px 8px rgb(228, 255, 78);
+  border-radius: 2vw;
+}
+
+#input-area {
+  margin-top: -5%;
+}
+
+#amount {
+  width: 3vw;
+}
+
+.description {
+  width: 60%;
+}
+
+.checkout-form {
+  margin: 0;
+  height: 90%;
+  margin-bottom: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+#loading-indicator {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loading-indicator img {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
+#email {
+  margin-top: -5%;
+}
+
+#payment-form {
+  margin: 4%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  overflow: scroll;
+}
+
+#confirm-button {
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+#payment-result {
+  margin: 3%;
+}
+
+input {
+  font-family: monospace;
+}

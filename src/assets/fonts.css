@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "AlterEgo BB W00 Regular";
+  src: url("@/assets/font/Alter/dfb3844c6834f75c91f844559732e9a4.eot");
+  src: url("@/assets/font/Alter/dfb3844c6834f75c91f844559732e9a4.eot?#iefix") format("embedded-opentype"),
+       url("@/assets/font/Alter/dfb3844c6834f75c91f844559732e9a4.woff") format("woff"),
+       url("@/assets/font/Alter/dfb3844c6834f75c91f844559732e9a4.woff2") format("woff2"),
+       url("@/assets/font/AlterEgo.ttf") format("truetype"),
+       url("@/assets/font/Alter/dfb3844c6834f75c91f844559732e9a4.svg#AlterEgo BB W00 Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "AlterEgo BB W00 Regular", sans-serif;
+}
